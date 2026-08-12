@@ -1,0 +1,24 @@
+{
+  "name": "guidewire-tests",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "policies:template": "node scripts/generatePolicyTemplate.js",
+    "test:policies": "playwright test tests/CreatePolicies.spec.ts --headed --workers=1 --project=chromium",
+    "test:headed": "playwright test --headed --workers=1 --project=chromium",
+    "report": "playwright show-report"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "@playwright/test": "^1.61.1",
+    "@types/node": "^26.1.1",
+    "dotenv": "^17.4.2",
+    "exceljs": "^4.4.0",
+    "typescript": "^7.0.2",
+    "xlsx": "^0.18.5"
+  }
+}

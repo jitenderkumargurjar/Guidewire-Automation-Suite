@@ -1,0 +1,23 @@
+
+# Playwright
+node_modules/
+/test-results/
+/playwright-report/
+/blob-report/
+/playwright/.cache/
+/playwright/.auth/
+/test-reports/
+
+# Secrets
+.env
+Automation-tests.zip
+
+# Real test data (contains customer/policy details) - run "npm run policies:template" to regenerate
+/test-data/policies.xlsx
+/test-data/~$policies.xlsx
+
+# Debug artifacts
+/screenshots/
+
+# Personal local Claude Code settings
+.claude/settings.local.json
