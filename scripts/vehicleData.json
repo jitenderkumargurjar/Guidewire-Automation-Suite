@@ -1,0 +1,3921 @@
+{
+  "Affinity Auto": {
+    "Acura": [
+      "ADX",
+      "ILX",
+      "Integra",
+      "MDX",
+      "RDX",
+      "RL",
+      "RLX",
+      "TL",
+      "TLX",
+      "TSX (Non Sport Wagon models)",
+      "ZDX"
+    ],
+    "Audi": [
+      "A3",
+      "A4",
+      "A5",
+      "Allroad",
+      "Q3",
+      "Q4 e-tron",
+      "Q5",
+      "Q6 e-tron",
+      "Q7",
+      "Q8",
+      "Q8 e-tron",
+      "TT (Non RS models)",
+      "TTS",
+      "e-tron (Non GT, Non S models)"
+    ],
+    "BMW": [
+      "1 Series 128",
+      "1 Series 135",
+      "2 Series 228",
+      "2 Series 230",
+      "3 Series 320",
+      "3 Series 328",
+      "3 Series 330",
+      "3 Series 335",
+      "3 Series 340",
+      "3 Series ActiveHybrid",
+      "4 series 428",
+      "4 series 430",
+      "4 series 435",
+      "4 series 440",
+      "5 series 528",
+      "5 series 530",
+      "5 series 535",
+      "5 series 540",
+      "5 series 550",
+      "5 series ActiveHybrid",
+      "6 series 640",
+      "X1 (Non M models)",
+      "X2 (Non M models)",
+      "X3 (Non M models)",
+      "X4 xDrive28",
+      "X4 xDrive30",
+      "X4 xDrive35",
+      "X5 (Non M models)",
+      "X6 (Non M models)",
+      "Z3",
+      "Z4 (Non M models)",
+      "i3",
+      "i4 eDrive35",
+      "i4 eDrive40",
+      "i4 xDrive40",
+      "i5 eDrive40",
+      "i5 xDrive40"
+    ],
+    "Buick": [
+      "CASCADA",
+      "Enclave",
+      "Encore",
+      "Encore GX",
+      "Envision",
+      "Envista",
+      "Lacrosse",
+      "Lucerne",
+      "Regal TourX",
+      "Regal/Regal Sportback",
+      "Verano"
+    ],
+    "Cadillac": [
+      "ATS (Non V models)",
+      "CT4 (Non V models)",
+      "CT5 (Non V models)",
+      "CT6 (Non V models)",
+      "CT6 PLUG-IN Hybrid",
+      "CTS (Non V models)",
+      "DTS",
+      "Escalade",
+      "LYRIQ",
+      "SRX",
+      "STS (Non V models)",
+      "XT4",
+      "XT5",
+      "XT6",
+      "XTS"
+    ],
+    "Chevrolet": [
+      "Avalanche",
+      "Aveo",
+      "Blazer",
+      "Blazer EV",
+      "Bolt EUV",
+      "Bolt EV",
+      "Camaro (Non ZL1, Non Z28 models)",
+      "Captiva",
+      "Cobalt",
+      "Colorado",
+      "Cruze",
+      "Equinox",
+      "Equinox EV",
+      "Express 1500",
+      "Express 2500",
+      "Express 3500",
+      "HHR",
+      "Impala (Non Limited models)",
+      "Malibu",
+      "Malibu Hybrid",
+      "Monte Carlo",
+      "Silverado 1500 Pickup",
+      "Silverado 2500 Pickup",
+      "Silverado 3500 Pickup",
+      "Sonic",
+      "Spark",
+      "Spark EV",
+      "Suburban",
+      "Tahoe",
+      "Tahoe Hybrid",
+      "Trailblazer",
+      "Traverse",
+      "Trax",
+      "Uplander",
+      "Volt"
+    ],
+    "Chrysler": [
+      "200",
+      "300 (Non SRT models)",
+      "Aspen",
+      "Aspen Hybrid",
+      "PT Cruiser",
+      "Pacifica",
+      "Pacifica Hybrid",
+      "Pacifica Plug-In Hybrid",
+      "Sebring",
+      "Town & Country",
+      "Voyager"
+    ],
+    "Dodge": [
+      "Avenger",
+      "Caliber",
+      "Challenger (Non SRT, Non Hellcat models)",
+      "Charger (Non SRT, Non Hellcat models)",
+      "Dakota Pickup",
+      "Dart",
+      "Durango (Non SRT, Non Hellcat models)",
+      "Grand Caravan",
+      "Hornet",
+      "Journey",
+      "Magnum",
+      "Nitro"
+    ],
+    "FIAT": [
+      "500 (Non Abarth models)",
+      "500L",
+      "500X",
+      "500c (Non Abarth models)",
+      "500e"
+    ],
+    "Ford": [
+      "Bronco (Non Raptor models)",
+      "Bronco Sport (Non Raptor models)",
+      "C-MAX Energi",
+      "C-Max Hybrid",
+      "Crown Victoria",
+      "E-150 Van",
+      "E-250 Van",
+      "E-350 Van",
+      "ECOSPORT",
+      "Edge",
+      "Escape",
+      "Escape Hybrid",
+      "Escape Plug-In Hybrid",
+      "Expedition",
+      "Expedition MAX",
+      "Explorer",
+      "Explorer Hybrid",
+      "Explorer Sport Trac",
+      "F-150 Lightning EV",
+      "F-150 Pickup (Non Raptor models)",
+      "F-250 Pickup",
+      "F-350 Pickup",
+      "F-450 Pickup",
+      "Fiesta",
+      "Flex",
+      "Focus (Non RS, Non SVT models)",
+      "Focus ST",
+      "Fusion",
+      "Fusion Energi",
+      "Fusion Hybrid",
+      "MUSTANG (Non GT350, Non GT500, Non Dark Horse)",
+      "Maverick",
+      "Mustang GT (Non GT350, Non GT500, Non Dark Horse)",
+      "Mustang Mach-E",
+      "Ranger (Non Raptor models)",
+      "Taurus",
+      "Transit (FullSize)",
+      "Transit Connect Electric",
+      "Transit Connect Van"
+    ],
+    "Genesis": [
+      "Electrified G80",
+      "Electrified GV70",
+      "G70",
+      "G80",
+      "G90",
+      "GV60",
+      "GV70",
+      "GV80",
+      "GV80 Coupe"
+    ],
+    "GMC": [
+      "Acadia",
+      "Canyon",
+      "Envoy",
+      "Savana 1500 Van",
+      "Savana 2500 Van",
+      "Savana 3500 Van",
+      "Sierra 1500 Hybrid",
+      "Sierra 1500 Limited",
+      "Sierra 1500 Pickup",
+      "Sierra 2500 Pickup",
+      "Sierra 3500 Pickup",
+      "Sierra EV",
+      "Terrain",
+      "Yukon",
+      "Yukon XL"
+    ],
+    "Honda": [
+      "Accord",
+      "Accord Crosstour",
+      "Accord Hybrid",
+      "Accord Plug-In",
+      "CR-V",
+      "CR-V Hybrid",
+      "CR-Z",
+      "Civic (Non-R Type models)",
+      "Clarity Electric",
+      "Clarity Hybrid",
+      "Clarity Plug-In Hybrid",
+      "Crosstour",
+      "Element",
+      "Fit",
+      "Fit EV",
+      "HR-V",
+      "Insight",
+      "Odyssey",
+      "Passport",
+      "Passport EX-L",
+      "Pilot",
+      "Prologue",
+      "Ridgeline"
+    ],
+    "Hyundai": [
+      "Accent",
+      "Azera",
+      "Elantra (Non N models)",
+      "Entourage",
+      "Equus",
+      "Genesis",
+      "IONIQ 5",
+      "IONIQ 6",
+      "IONIQ Electric",
+      "IONIQ Hybrid",
+      "IONIQ Plug-in Hybrid",
+      "KONA Electric",
+      "Kona (Non N models)",
+      "Palisade",
+      "SANTA FE Hybrid",
+      "SANTA FE Plug-In Hybrid",
+      "SANTA FE Sport",
+      "SANTA FE XL",
+      "SONATA Hybrid",
+      "SONATA Plug-in Hybrid",
+      "Santa Cruz",
+      "Santa Fe",
+      "Sonata",
+      "TUCSON Hybrid",
+      "TUCSON Plug-in Hybrid",
+      "Tiburon",
+      "Tucson",
+      "Veloster (Non N models)",
+      "Venue",
+      "Veracruz"
+    ],
+    "Infiniti": [
+      "EX35",
+      "EX37",
+      "FX35",
+      "FX37",
+      "FX45",
+      "FX50",
+      "G20",
+      "G35",
+      "G37",
+      "Jx35",
+      "M35",
+      "M35h",
+      "M37",
+      "M45",
+      "M56",
+      "Q40",
+      "Q50",
+      "Q50 Hybrid",
+      "Q60",
+      "Q60 Convertible",
+      "Q60 Coupe",
+      "Q70",
+      "Q70 Hybrid",
+      "Q70L",
+      "QX30",
+      "QX50",
+      "QX55",
+      "QX56",
+      "QX60",
+      "QX60 Hybrid",
+      "QX70",
+      "QX80"
+    ],
+    "Jeep": [
+      "Cherokee",
+      "Commander",
+      "Compass",
+      "Gladiator",
+      "Grand Cherokee (Non SRT models)",
+      "Grand Cherokee L",
+      "Grand Wagoneer",
+      "Liberty",
+      "Patriot",
+      "Renegade",
+      "Wagoneer",
+      "Wrangler (Non Rubicon 392 models)"
+    ],
+    "Kia": [
+      "Amanti",
+      "Borrego",
+      "Cadenza",
+      "Carnival",
+      "Carnival Hybrid",
+      "EV6",
+      "EV9",
+      "FORTE",
+      "Forte Koup",
+      "Forte5",
+      "K4",
+      "K5",
+      "K900",
+      "Niro",
+      "Optima",
+      "Optima Hybrid",
+      "Optima Plug-In Hybrid",
+      "Rio",
+      "Rio5",
+      "Rondo",
+      "STINGER",
+      "Sedona",
+      "Seltos",
+      "Sorento",
+      "Sorento Hybrid",
+      "Sorento Plug-In Hybrid",
+      "Soul",
+      "Spectra",
+      "Sportage",
+      "Sportage Hybrid",
+      "Sportage Plug-In Hybrid",
+      "Telluride"
+    ],
+    "Lexus": [
+      "CT 200",
+      "CT 200h",
+      "ES 250",
+      "ES 300H",
+      "ES 350",
+      "GS 200t",
+      "GS 300",
+      "GS 350",
+      "GS 430",
+      "GS 450h",
+      "GS 460",
+      "GX 460",
+      "GX 470",
+      "GX 550",
+      "HS 250h",
+      "IS 200T",
+      "IS 250",
+      "IS 250C",
+      "IS 300",
+      "IS 350",
+      "IS 500",
+      "IS F",
+      "LS 460",
+      "LS 500",
+      "LX 570",
+      "LX 600",
+      "NX 200T",
+      "NX 250",
+      "NX 300",
+      "NX 300H",
+      "NX 350",
+      "NX 350h",
+      "NX 450h+",
+      "RC 200T",
+      "RC 300",
+      "RC 350",
+      "RC 350 F Sport",
+      "RC F",
+      "RX 350",
+      "RX 350L",
+      "RX 350h",
+      "RX 400h",
+      "RX 450h",
+      "RX 450h+",
+      "RX 450hL",
+      "RX 500H",
+      "RZ 300e",
+      "RZ 450e",
+      "TX 350",
+      "TX 500h",
+      "TX 550h+",
+      "UH 250H",
+      "UX 200",
+      "UX 250h",
+      "UX 300h"
+    ],
+    "Lincoln": [
+      "Aviator",
+      "Aviator Hybrid",
+      "Continental",
+      "Corsair",
+      "MKC",
+      "MKS",
+      "MKT",
+      "MKX",
+      "MKZ",
+      "MKZ Hybrid",
+      "Nautilus",
+      "Nautilus Hybrid",
+      "Navigator",
+      "Navigator L",
+      "Town Car"
+    ],
+    "Mazda": [
+      "2",
+      "3",
+      "5",
+      "6",
+      "B2300",
+      "B3000",
+      "B4000",
+      "CX-3",
+      "CX-30",
+      "CX-5",
+      "CX-50",
+      "CX-50 Hybrid",
+      "CX-7",
+      "CX-70",
+      "CX-70 PHEV",
+      "CX-9",
+      "CX-90",
+      "CX-90 PHEV",
+      "MX-30 EV",
+      "MX-5 Miata",
+      "Tribute"
+    ],
+    "Mercedes-Benz": [
+      "A220",
+      "B-Class",
+      "C-Class (Non AMG models)",
+      "CLA (Non AMG models)",
+      "CLE 300",
+      "CLE 450",
+      "CLS (Non AMG models)",
+      "E-Class (Non AMG models)",
+      "EQB",
+      "GL 320",
+      "GL 350",
+      "GL 450",
+      "GLA (Non AMG models)",
+      "GLB (Non AMG models)",
+      "GLC (Non AMG models)",
+      "GLE 300",
+      "GLE 350",
+      "GLE 400",
+      "GLE 450 (Non AMG models)",
+      "GLK",
+      "GLS 350",
+      "GLS 450",
+      "ML 250",
+      "ML 320",
+      "ML 350",
+      "ML 400",
+      "ML 450",
+      "Metris",
+      "R-Class",
+      "SL400",
+      "SL450",
+      "SLC (Non AMG models)",
+      "SLK (Non AMG models)",
+      "Sprinter"
+    ],
+    "Mini": [
+      "Cooper / Cooper S",
+      "Cooper Clubman / Clubman S",
+      "Countryman Plug-in Hybrid",
+      "Countryman S"
+    ],
+    "Mitsubishi": [
+      "Eclipse (Non Spyder models)",
+      "Eclipse Cross",
+      "Endeavor",
+      "Galant",
+      "LANCER (Non Evolution models)",
+      "Lancer Sportback (Non Evolution models)",
+      "Mirage",
+      "Mirage G4",
+      "Outlander",
+      "Outlander PHEV",
+      "Outlander Sport",
+      "Raider"
+    ],
+    "Nissan": [
+      "350Z",
+      "370Z",
+      "Altima",
+      "Altima Hybrid",
+      "Ariya",
+      "Armada",
+      "Cube",
+      "Frontier",
+      "Juke",
+      "KICKS",
+      "LEAF",
+      "Maxima",
+      "Murano",
+      "Murano CrossCabriolet",
+      "Murano Hybrid",
+      "NV",
+      "NV200",
+      "Pathfinder",
+      "Pathfinder Hybrid",
+      "Quest",
+      "Rogue",
+      "Rogue Hybrid",
+      "Sentra",
+      "Titan (Non XD models)",
+      "Versa",
+      "Versa Note",
+      "Xterra",
+      "Z"
+    ],
+    "Polestar": [
+      "2",
+      "3",
+      "4"
+    ],
+    "Ram": [
+      "1500 (Non TRX models)",
+      "2500",
+      "3500",
+      "Dakota",
+      "ProMaster 1500",
+      "ProMaster 2500",
+      "ProMaster City",
+      "ProMaster EV"
+    ],
+    "Rivian": [
+      "R1S",
+      "R1T"
+    ],
+    "Scion": [
+      "FR-S",
+      "IA",
+      "IQ",
+      "iM",
+      "tC",
+      "xB",
+      "xD"
+    ],
+    "Subaru": [
+      "Ascent",
+      "BRZ",
+      "CROSSTREK",
+      "Forester",
+      "Impreza (Non WRX models)",
+      "Legacy",
+      "Outback",
+      "Solterra",
+      "Tribeca"
+    ],
+    "Tesla": [
+      "Model 3",
+      "Model S",
+      "Model X",
+      "Model Y"
+    ],
+    "Toyota": [
+      "4Runner",
+      "86",
+      "Avalon",
+      "Avalon Hybrid",
+      "C-HR",
+      "Camry",
+      "Camry Hybrid",
+      "Camry Solara",
+      "Corolla (non GR models)",
+      "Corolla Cross",
+      "Corolla Cross Hybrid",
+      "Corolla Hatchback",
+      "Corolla Hybrid",
+      "Corolla iM",
+      "Crown",
+      "Crown Signia",
+      "FJ Cruiser",
+      "GR86",
+      "Grand Highlander",
+      "Grand Highlander Hybrid",
+      "Highlander",
+      "Highlander Hybrid",
+      "Land Cruiser",
+      "Matrix",
+      "Prius",
+      "Prius Plug-in Hybrid",
+      "Prius Prime",
+      "Prius c",
+      "Prius v",
+      "RAV4",
+      "RAV4 EV",
+      "RAV4 Hybrid",
+      "RAV4 Prime",
+      "Sequoia",
+      "Sienna",
+      "Tacoma",
+      "Tundra",
+      "Venza",
+      "Yaris",
+      "Yaris iA",
+      "bZ4X"
+    ],
+    "Volkswagen": [
+      "Arteon",
+      "Atlas",
+      "Atlas Cross Sport",
+      "Beetle",
+      "Beetle Convertible",
+      "CC",
+      "EOS",
+      "GLI",
+      "GOLF ALLTRACK",
+      "GOLF SPORTWAGEN",
+      "GTI",
+      "Golf (Non R models)",
+      "Golf GTI",
+      "ID.4",
+      "ID.Buzz",
+      "Jetta",
+      "Jetta GLI",
+      "New Beetle",
+      "New Beetle Convertible",
+      "Passat",
+      "Rabbit",
+      "Routan",
+      "Taos",
+      "Tiguan",
+      "Touareg",
+      "Touareg 2",
+      "e-Golf"
+    ],
+    "Volvo": [
+      "C30",
+      "C40 Recharge",
+      "C70",
+      "EC40",
+      "EX30",
+      "EX40",
+      "EX90",
+      "S40",
+      "S60",
+      "S60 Cross Country",
+      "S60 Recharge",
+      "S80",
+      "S90",
+      "S90 Recharge",
+      "V50",
+      "V60",
+      "V60 Cross Country",
+      "V60 Recharge",
+      "V70",
+      "V90",
+      "V90 Cross Country",
+      "XC40",
+      "XC40 Recharge",
+      "XC60",
+      "XC60 Recharge",
+      "XC70",
+      "XC90",
+      "XC90 Recharge"
+    ]
+  },
+  "Motorhome Class A": {
+    "Airstream": [
+      "Land Yacht"
+    ],
+    "Alfa": [
+      "See Ya",
+      "See Ya Founder",
+      "See Ya Gold"
+    ],
+    "American Coach": [
+      "Americal Heritage",
+      "American Dream",
+      "American Tradition",
+      "Revolution"
+    ],
+    "Beaver": [
+      "Contessa",
+      "Marquis",
+      "Marquis Garnet",
+      "Marquis Jasper",
+      "Monterey Series",
+      "Patriot Series",
+      "Patriot Thunder Series",
+      "Patriot Ticonderoga",
+      "Santiam"
+    ],
+    "Blue Bird": [
+      "Wanderlodge"
+    ],
+    "C T CoachWorks": [
+      "Siena"
+    ],
+    "Chariot": [
+      "Coronado",
+      "Dominator",
+      "Eliminator"
+    ],
+    "Coachmen": [
+      "Aurora",
+      "Cross Country",
+      "Encore",
+      "Encounter",
+      "Entourage",
+      "Epic",
+      "Euro",
+      "Freedom Vision",
+      "Mirada",
+      "Pathfinder",
+      "Pursuit",
+      "Santara",
+      "Sportscoach"
+    ],
+    "Country Coach": [
+      "Affinity",
+      "Allure",
+      "Inspire",
+      "Intrigue",
+      "Magna",
+      "Prevost",
+      "Siena",
+      "Tribute",
+      "Veranda 600 Series"
+    ],
+    "Damon": [
+      "Astoria",
+      "Avanti",
+      "Challenger",
+      "Daybreak",
+      "Escaper",
+      "Essence",
+      "Intruder",
+      "Outlaw",
+      "Tuscany",
+      "Ultrasport"
+    ],
+    "Dynamax": [
+      "DX3",
+      "DynaQuest",
+      "Europa",
+      "Force",
+      "Grand Sport",
+      "Grand Sport Columbia",
+      "Grand Sport GT",
+      "Grand Sport M2",
+      "Grand Sport Ultra"
+    ],
+    "East To West": [
+      "Bravado"
+    ],
+    "Entegra": [
+      "Accolade (Super C)",
+      "Anthem",
+      "Reatta"
+    ],
+    "Featherlite": [
+      "Vantare"
+    ],
+    "Fleetwood": [
+      "American Allegiance",
+      "American Dream",
+      "American Eagle",
+      "American Heritage",
+      "American Revolution",
+      "American Tradition",
+      "Axon",
+      "Bounder",
+      "Cambria",
+      "Discovery",
+      "Encounter",
+      "Excursion",
+      "Expedition",
+      "Fiesta",
+      "Flair",
+      "Flex",
+      "Fortis",
+      "Frontier",
+      "Pace Arrow",
+      "Pace Arrow Vision",
+      "Palisade",
+      "Providence",
+      "Revolution",
+      "Southwind",
+      "Storm",
+      "Terra"
+    ],
+    "Forest River": [
+      "Berkshire",
+      "Charleston",
+      "Fr3",
+      "Georgetown",
+      "Legacy",
+      "Tsunami"
+    ],
+    "Foretravel": [
+      "320 Series",
+      "Nimbus Series",
+      "Phenix",
+      "Realm",
+      "U270",
+      "U295",
+      "ic-37",
+      "ih-45"
+    ],
+    "Four winds": [
+      "5000",
+      "Fun Mover",
+      "Hurricane",
+      "Infinity",
+      "Magellen",
+      "Mandalay",
+      "Montecito",
+      "Serrano",
+      "Windsport"
+    ],
+    "General Coach West": [
+      "Citation"
+    ],
+    "Georgie Boy": [
+      "Bellagio",
+      "Cruise Air",
+      "Cruise Master",
+      "Landau",
+      "Pursuit"
+    ],
+    "Gulf Stream": [
+      "Atrium",
+      "Bounty Hunter",
+      "Caribbean",
+      "Cavalier",
+      "Conquest",
+      "Conquest Super C",
+      "Crescendo",
+      "Endura",
+      "Friendship",
+      "Independence",
+      "Montaj",
+      "Scenic Cruiser",
+      "Sun Voyager",
+      "Super Nova",
+      "Tour Master",
+      "Ultra",
+      "Ultra -Super C",
+      "Yellowstone"
+    ],
+    "Haulmark": [
+      "Motorcoach Series",
+      "Motorgarage Series",
+      "Motorhome Series"
+    ],
+    "Holiday Rambler": [
+      "Admiral",
+      "Aluma-lite",
+      "Ambassador",
+      "Arista",
+      "Armada",
+      "Eclipse",
+      "Endeavor",
+      "Imperial",
+      "Invicta",
+      "Nautica",
+      "Navigator",
+      "Neptune",
+      "Reno",
+      "Scepter",
+      "Trip",
+      "Vacationer"
+    ],
+    "Jayco": [
+      "Alante",
+      "Embark",
+      "Entegra",
+      "Insignia",
+      "Precept",
+      "Precept Prestige",
+      "Seneca",
+      "Seneca Prestige",
+      "Seneca XT"
+    ],
+    "King Of The Road": [
+      "Genesis"
+    ],
+    "Liberty Coach": [
+      "All Prevost Conversions"
+    ],
+    "Mandalay": [
+      "Presidio",
+      "Valencia"
+    ],
+    "Marathon Coach": [
+      "Custom (Prevost Chassis)"
+    ],
+    "Millennium": [
+      "Prevost"
+    ],
+    "Monaco": [
+      "Camelot",
+      "Cayman",
+      "Diplomat",
+      "Dynasty",
+      "Executive",
+      "Knight",
+      "Lapalma",
+      "Marquis",
+      "Monarch",
+      "Riptide",
+      "Signature",
+      "Trek",
+      "Vesta",
+      "Windsor",
+      "Windsor 40'"
+    ],
+    "National": [
+      "Dolphin",
+      "Pacifica",
+      "Sea Breeze",
+      "Splash",
+      "Surf Side",
+      "Tradewinds",
+      "Tropi-cal"
+    ],
+    "Newell": [
+      "Custom"
+    ],
+    "Newmar": [
+      "Allstar",
+      "Baystar",
+      "Baystar Sport",
+      "Canyon Star",
+      "Dutch Aire",
+      "Dutch Star",
+      "Essex",
+      "Grand Star",
+      "King Aire",
+      "Kountry Star",
+      "London Aire",
+      "Mountain Aire",
+      "New Aire",
+      "Northern Star",
+      "Scottsdale",
+      "Super Star",
+      "Supreme Aire",
+      "Ventana",
+      "Ventana LE"
+    ],
+    "Nexus": [
+      "Bentley",
+      "Evoque",
+      "Ghost",
+      "Maybach",
+      "Rebel",
+      "Verrado",
+      "Wraith"
+    ],
+    "Optima Industries": [
+      "Columbia",
+      "Coronado",
+      "Elan",
+      "M2"
+    ],
+    "R-Vision": [
+      "Trail-Aire",
+      "Trail-Lite"
+    ],
+    "Renegade": [
+      "Cascadia",
+      "Classic",
+      "Explorer",
+      "Garage Series",
+      "Ikon",
+      "Motorhome",
+      "Sports Deck Series",
+      "Valencia",
+      "Veracruz",
+      "Verona",
+      "XL"
+    ],
+    "Rexhall": [
+      "Aerbus",
+      "American Clipper",
+      "Rexair",
+      "Roseair",
+      "Vision"
+    ],
+    "Safari": [
+      "Cascade",
+      "Cheetah",
+      "Compression",
+      "Gazelle",
+      "Panther",
+      "Passage",
+      "Simba",
+      "Trek"
+    ],
+    "Show Hauler": [
+      "Garage Series",
+      "Motor Home Series",
+      "Towing Motor Homes series"
+    ],
+    "Silver Crown": [
+      "PonyXpress"
+    ],
+    "Space Craft": [
+      "Space Craft"
+    ],
+    "Sun Crest": [
+      "Sun Crest"
+    ],
+    "Thor": [
+      "A.C.E.",
+      "Aria",
+      "Astoria",
+      "Avanti",
+      "Axis",
+      "Challenger",
+      "Daybreak",
+      "Four Winds Infinity",
+      "Freedom Traveler",
+      "Hurricane",
+      "Inception",
+      "Indigo",
+      "Luminate",
+      "Miramar",
+      "Outlaw",
+      "Palazzo",
+      "Pasadena",
+      "Resonate",
+      "Riviera",
+      "Serrano",
+      "Tuscany",
+      "Vegas",
+      "Venetian",
+      "Windsport"
+    ],
+    "Tiffin": [
+      "Allegro Bay",
+      "Allegro Breeze",
+      "Allegro Bus",
+      "Allegro Red",
+      "Byway",
+      "Open Road Allegro",
+      "Phaeton",
+      "Zephyr"
+    ],
+    "Travel Supreme": [
+      "Alante",
+      "Atlante",
+      "Envoy",
+      "Insignia",
+      "Travel Supreme"
+    ],
+    "Triple E": [
+      "Commander",
+      "Embassy",
+      "Empress",
+      "Invitation",
+      "Signature"
+    ],
+    "United Specialities": [
+      "Toterhome series"
+    ],
+    "Western": [
+      "Alpine Coach"
+    ],
+    "Winnebago": [
+      "Adventurer",
+      "Brave",
+      "Chalet",
+      "Destination",
+      "Forza",
+      "Grand Tour",
+      "Horizon",
+      "Inspire",
+      "Intent",
+      "Journey",
+      "Sightseer",
+      "Suncruiser",
+      "Tour",
+      "Vectra",
+      "Via",
+      "Vista",
+      "Voyage"
+    ],
+    "Winnebago-Itasca": [
+      "Ellipse",
+      "Ellipse Ultra",
+      "Horizon",
+      "Latitude",
+      "Meridian",
+      "Reyo",
+      "Solei",
+      "Suncruiser",
+      "Sunova",
+      "Sunrise",
+      "Sunstar",
+      "Tribute"
+    ]
+  },
+  "Motorhome Class B": {
+    "Airstream": [
+      "Atlas",
+      "Avenue",
+      "Interstate",
+      "Parkway",
+      "Rangeline",
+      "Westfalia"
+    ],
+    "American Coach": [
+      "Patriot"
+    ],
+    "Antero Adventure": [
+      "Kakadu"
+    ],
+    "Born Free": [
+      "Freedom",
+      "Jewel",
+      "Royal Imperial",
+      "Royal Majestic",
+      "Spirit",
+      "Splendor"
+    ],
+    "Carado": [
+      "Axion",
+      "Banff"
+    ],
+    "Chinook": [
+      "Countryside"
+    ],
+    "Coach House": [
+      "Arriva"
+    ],
+    "Coachmen": [
+      "Beyond",
+      "Crossfit",
+      "Galleria",
+      "Nova",
+      "Pixel"
+    ],
+    "Dolphin Motor Coach": [
+      "CapeCod",
+      "Day Traveler",
+      "Dolphin",
+      "Execujet",
+      "National Traveler"
+    ],
+    "Dynamax": [
+      "Starflyte"
+    ],
+    "Embassy": [
+      "Traveler",
+      "Traveler Duo",
+      "Traveler Sport"
+    ],
+    "Entegra": [
+      "Ethos"
+    ],
+    "Erwin Hymer": [
+      "Sunlight V1",
+      "Sunlight V2"
+    ],
+    "Evergreen": [
+      "Imperial"
+    ],
+    "Field Van": [
+      "Meadow"
+    ],
+    "Fleetwood": [
+      "American Patriot",
+      "Irok FSL"
+    ],
+    "Forest River": [
+      "M-B Crusier"
+    ],
+    "Foretravel": [
+      "Microvilla"
+    ],
+    "Four winds": [
+      "Ventura"
+    ],
+    "Genesis Supreme": [
+      "Supreme"
+    ],
+    "Grand Design": [
+      "Lineage VP Series (LVP)",
+      "Lineage VT Series (LVP)"
+    ],
+    "Great West Vans": [
+      "Classic Supreme",
+      "Sprinter",
+      "Sprinter Legend"
+    ],
+    "Grech": [
+      "Strada",
+      "Terreno-Ion",
+      "Turismo Ion Series"
+    ],
+    "Grit Overland": [
+      "Link 148 S4"
+    ],
+    "GTRV": [
+      "Westy"
+    ],
+    "Gulf Stream": [
+      "Vista Cruiser"
+    ],
+    "Hymer": [
+      "Aktiv"
+    ],
+    "Jayco": [
+      "Comet",
+      "Solstice",
+      "Swift",
+      "Terrain"
+    ],
+    "JucyUSA": [
+      "Trailblazer"
+    ],
+    "Leisure Travel": [
+      "Free Flight",
+      "Free Spirit",
+      "Freedom Wide Body"
+    ],
+    "Majestic Leisure Craft": [
+      "Tourer"
+    ],
+    "Midwest": [
+      "Weekender"
+    ],
+    "Midwest Automotive Designs": [
+      "Day Cruiser 2500",
+      "Day Cruiser 3500",
+      "Legend",
+      "Passage"
+    ],
+    "Modvan": [
+      "Transit"
+    ],
+    "Noovo": [
+      "Lite",
+      "Next",
+      "Plus"
+    ],
+    "OGV Luxury Coach": [
+      "V-RV Series"
+    ],
+    "Panoramic RV": [
+      "Panoramic"
+    ],
+    "Pleasure Way": [
+      "Ascent",
+      "Basis",
+      "Lexor",
+      "Ontour",
+      "Plateau",
+      "Prestige",
+      "Pursuit",
+      "Rekon",
+      "Tofino",
+      "Traverse"
+    ],
+    "R Vision": [
+      "Trail Lite"
+    ],
+    "Regency": [
+      "Concept One",
+      "National Traveler",
+      "Xalta"
+    ],
+    "Remote Vans": [
+      "Aegis",
+      "Oasis"
+    ],
+    "Roadtrek": [
+      "Adventurous",
+      "Chase",
+      "E-Trek",
+      "Play",
+      "Popular",
+      "Ranger RT",
+      "SS Agile",
+      "SS Ideal",
+      "Simplicity",
+      "Versatile",
+      "Zion"
+    ],
+    "RoyaleRV": [
+      "TravelALL 24"
+    ],
+    "Safari Condo": [
+      "ProMaster"
+    ],
+    "Sportsmobile": [
+      "Sportsmobile 4x4"
+    ],
+    "Sportsmobile-(2WD Only)": [
+      "Sportsmobile"
+    ],
+    "Story Teller": [
+      "Classic Mode",
+      "Overland"
+    ],
+    "Sync Vans": [
+      "Sunstone"
+    ],
+    "The RV Factory": [
+      "Azur"
+    ],
+    "Thor": [
+      "Dazzle",
+      "Freedom Elite Van",
+      "Rize",
+      "Sanctuary",
+      "Scope",
+      "Sequence",
+      "Talavera",
+      "Tellaro",
+      "Tranquility",
+      "Twist"
+    ],
+    "Tiffin": [
+      "Cahaba",
+      "GH-1",
+      "GH-2",
+      "GT-1"
+    ],
+    "Trail Wagons": [
+      "Chinook",
+      "Travel Van"
+    ],
+    "Ultimate Toys": [
+      "Ultimate Coach",
+      "Ultimate RV"
+    ],
+    "Vandoit": [
+      "LIV"
+    ],
+    "Winnebago": [
+      "Adventure Wagon",
+      "Boldt",
+      "Boldt 4x4 70BL",
+      "Era",
+      "Paseo",
+      "Revel",
+      "Roam",
+      "Solis",
+      "Solis Pocket",
+      "Travato"
+    ]
+  },
+  "Motorhome Class C": {
+    "Adventurer": [
+      "Adventurer"
+    ],
+    "Airstream": [
+      "Atlas"
+    ],
+    "Bigfoot": [
+      "Bigfoot"
+    ],
+    "Born Free": [
+      "Built For Two",
+      "Casual Elegance",
+      "Rear Bath",
+      "Reign",
+      "Triumph"
+    ],
+    "Chinook": [
+      "Baja",
+      "Cascade",
+      "Concourse Xl",
+      "Destiny",
+      "Eagle",
+      "Glacier",
+      "Maverick",
+      "Premier",
+      "Summit"
+    ],
+    "Coach House": [
+      "Platinum"
+    ],
+    "Coachmen": [
+      "Concord",
+      "Cross Trail",
+      "Cross Trek",
+      "Freedom",
+      "Freedom Express",
+      "Freelander",
+      "Leprechaun",
+      "Orion",
+      "Prism",
+      "Santara"
+    ],
+    "Dutchmen": [
+      "Dorado",
+      "Dutchmen",
+      "Express",
+      "Kodiak"
+    ],
+    "Dynamax": [
+      "Carri-go",
+      "DynaSport",
+      "Isata",
+      "Isata 3 Series",
+      "Isata 4 Series",
+      "Isata 5 Series",
+      "Isata 6",
+      "Isata 6 Series",
+      "Isata Touring Sedan",
+      "Rev"
+    ],
+    "EarthCruiser": [
+      "FX"
+    ],
+    "Earthroamer": [
+      "XVLT"
+    ],
+    "East To West": [
+      "Alita",
+      "Entrada"
+    ],
+    "Embassy": [
+      "Cape Cod"
+    ],
+    "Entegra": [
+      "Condor",
+      "Esteem",
+      "Odyssey",
+      "Qwest",
+      "Travel Supreme C Series"
+    ],
+    "Fleetwood": [
+      "Altitude",
+      "Icon",
+      "Jamboree",
+      "Jamboree Gt",
+      "Pulse",
+      "Quest",
+      "Surge",
+      "Tioga"
+    ],
+    "Forest River": [
+      "Forester",
+      "Lexington",
+      "Ridgeveiw",
+      "Solera",
+      "Sunseeker"
+    ],
+    "Four winds": [
+      "Chateau",
+      "Dutchmen",
+      "Four Winds",
+      "Freedom Elite",
+      "Fun Mover",
+      "Majestic",
+      "Siesta"
+    ],
+    "Fraserway": [
+      "Adventurer 4 (Quad)"
+    ],
+    "Georgie Boy": [
+      "Maverick"
+    ],
+    "Grand Design": [
+      "Lineage"
+    ],
+    "Gulf Stream": [
+      "BT Cruiser Touring",
+      "Conquest",
+      "Conquest B-Touring",
+      "Silver Bullet",
+      "Ultra",
+      "Vista Cruiser",
+      "Yellowstone"
+    ],
+    "Holiday Rambler": [
+      "Altera",
+      "Aluma-lite",
+      "Atlantis",
+      "Augusta",
+      "Element",
+      "Incline",
+      "Prodigy",
+      "Traveler",
+      "Vesta"
+    ],
+    "Host": [
+      "270",
+      "300",
+      "QS-330"
+    ],
+    "Jayco": [
+      "Envoy",
+      "Escapade",
+      "Granite Ridge",
+      "Greyhawk",
+      "Greyhawk Prestige",
+      "Melbourne",
+      "Melbourne Prestige",
+      "Precept",
+      "Redhawk"
+    ],
+    "Krystal": [
+      "30"
+    ],
+    "Lazy Daze": [
+      "M-23 1/2",
+      "M-26 1/2",
+      "M-31"
+    ],
+    "Leisure Travel": [
+      "Freedom Libero",
+      "Freedom Serenity",
+      "Libero",
+      "Serenity",
+      "Unity",
+      "Wonder"
+    ],
+    "Monaco": [
+      "Covina",
+      "Esquire",
+      "MontClair",
+      "Safari"
+    ],
+    "MVP": [
+      "Tahoe"
+    ],
+    "Newmar": [
+      "Freedome Aire"
+    ],
+    "Nexus": [
+      "Phantom",
+      "Triumph",
+      "Viper"
+    ],
+    "Phoenix": [
+      "Phoenix Campervan 190 TB",
+      "Phoenix Cruiser",
+      "Phoenix Cruiser Sport",
+      "TRX"
+    ],
+    "Pleasure Way": [
+      "Excell",
+      "Plateau"
+    ],
+    "Provan": [
+      "Tiger"
+    ],
+    "R-Vision": [
+      "Freedom Traveler",
+      "Trail-Lite"
+    ],
+    "Regency": [
+      "Ultra Brougham"
+    ],
+    "Renegade": [
+      "Venetian",
+      "Vienna",
+      "Villagio"
+    ],
+    "Rossmonster": [
+      "Havn"
+    ],
+    "Safari": [
+      "Damara B-Plus",
+      "Ivory"
+    ],
+    "Shasta": [
+      "Cynara"
+    ],
+    "Silver Crown": [
+      "PonyXpress",
+      "S-Series"
+    ],
+    "Starcraft": [
+      "Ambient"
+    ],
+    "Thor": [
+      "Chateau",
+      "Chateau Citation",
+      "Citation",
+      "Compass",
+      "Daybreak",
+      "Delano",
+      "Eddie Bauer",
+      "Four Winds",
+      "Freedom Elite",
+      "Gemini",
+      "Geneva",
+      "Magnitude",
+      "Omni",
+      "Outlaw",
+      "Pasadena SE",
+      "Quantum",
+      "Siesta",
+      "Synergy",
+      "Tiburon"
+    ],
+    "Thor Motorcoach": [
+      "Coleman Series"
+    ],
+    "Tiffin": [
+      "Midas",
+      "Wayfarer"
+    ],
+    "Triple E": [
+      "Regal",
+      "Regency"
+    ],
+    "Vanguard": [
+      "Kodiak"
+    ],
+    "Weekend Warrior": [
+      "Road Warrior"
+    ],
+    "Winnebago": [
+      "Access",
+      "Aspect",
+      "Chalet",
+      "Ekko",
+      "Fuse",
+      "Minnie",
+      "Minnie Winnie",
+      "Outlook",
+      "Porto",
+      "Rialta",
+      "Sunflyer/Suncruiser",
+      "Trend",
+      "View",
+      "Vita"
+    ],
+    "Winnebago-Itasca": [
+      "Cambria",
+      "Impulse",
+      "Navion",
+      "Navion IQ",
+      "Spirit",
+      "SunDancer",
+      "Viva!"
+    ]
+  },
+  "Travel Trailer": {
+    "Adak": [
+      "Bivouac",
+      "Outpost"
+    ],
+    "Airstream": [
+      "Bambi",
+      "Basecamp",
+      "Caravel",
+      "Classic",
+      "Eddie Bauer",
+      "Flying Cloud",
+      "Frank Lloyd Wright",
+      "Globetrotter",
+      "International",
+      "Land Yacht",
+      "Limited",
+      "Nest",
+      "PanAmerica",
+      "Pendleton",
+      "Pottery Barn",
+      "Safari",
+      "Sport",
+      "Tommy Bahama",
+      "Trade Wind",
+      "World Travler"
+    ],
+    "Aliner": [
+      "LXE"
+    ],
+    "Aljo": [
+      "Avalanche",
+      "Brazos",
+      "Lite",
+      "Rampage"
+    ],
+    "Allen": [
+      "Idle-Time"
+    ],
+    "Alliance RV": [
+      "Avenue",
+      "Benchmark",
+      "Delta",
+      "Valor"
+    ],
+    "AlpenLite": [
+      "Aspen"
+    ],
+    "Ameri-Camp": [
+      "Ameri-Camp",
+      "Summit Ridge"
+    ],
+    "American Freedom": [
+      "American Freedom",
+      "Go Anywhere",
+      "Sandstorm"
+    ],
+    "ATC": [
+      "ARV",
+      "Game Changer Pro Series"
+    ],
+    "Augusta": [
+      "Flex"
+    ],
+    "Aviator": [
+      "Electra",
+      "Wright Flyer"
+    ],
+    "Bigfoot": [
+      "Bigfoot 2500"
+    ],
+    "Black Series": [
+      "HQ"
+    ],
+    "Bontrager Outdoors": [
+      "Compact Teardrop"
+    ],
+    "Bowlus": [
+      "Rivet",
+      "Terra Firma"
+    ],
+    "Braxton Creek": [
+      "27 BH",
+      "Bushwacker",
+      "Freesolo"
+    ],
+    "Breckenridge": [
+      "Lakeview"
+    ],
+    "Brinkley": [
+      "Model I",
+      "Model Z Air",
+      "lx"
+    ],
+    "Camp-Inn": [
+      "560 Ultra"
+    ],
+    "Campmaster": [
+      "Excursion Series",
+      "MURT Series"
+    ],
+    "Carriage": [
+      "Domani"
+    ],
+    "Carson": [
+      "Funrunner",
+      "Kalispell",
+      "Rebel"
+    ],
+    "Casita": [
+      "Freedom",
+      "Heritage",
+      "Independence Deluxe",
+      "Liberty",
+      "Patriot",
+      "Spirit Deluxe"
+    ],
+    "Chalet": [
+      "Takena"
+    ],
+    "Chattanooga": [
+      "Borough",
+      "Flex Series",
+      "Nixie",
+      "Nooga",
+      "Nooga Blue Sky",
+      "Outlander B",
+      "Zen"
+    ],
+    "Cherokee": [
+      "Alpha Wolf",
+      "Black Label Series",
+      "Cherokee",
+      "Grey Wolf",
+      "Wolf Den",
+      "Wolf Pack",
+      "Wolf Pup"
+    ],
+    "Chinook": [
+      "Dream",
+      "RPM"
+    ],
+    "Cikira": [
+      "Classic Cruiser",
+      "Escape",
+      "Retro"
+    ],
+    "Coachmen": [
+      "Adrenaline",
+      "Apex",
+      "Capri",
+      "Captiva",
+      "Cascade",
+      "Cascade Premier",
+      "Catalina",
+      "Catalina Summit (All Series)",
+      "Chaparral",
+      "Clipper Cadet",
+      "Clipper Ultra-Lite",
+      "Freedom Express",
+      "Lite",
+      "Northern Spirit",
+      "Remote",
+      "Spirit",
+      "Spirit Ultra Lite",
+      "Spirit of America",
+      "Viking"
+    ],
+    "Coleman": [
+      "Expedition",
+      "Explorer",
+      "Lantern",
+      "Legacy",
+      "Rubicon"
+    ],
+    "Cortes": [
+      "17"
+    ],
+    "Cozy Traveler": [
+      "Cozy Traveler"
+    ],
+    "CrossRoads": [
+      "Altitude",
+      "Cruiser",
+      "Cruiser Aire",
+      "Elevation",
+      "Hampton",
+      "Hill Country",
+      "Longhorn",
+      "Rezerve",
+      "Slingshot",
+      "Sunset Trail",
+      "Texan",
+      "Volante",
+      "Z-1",
+      "Zinger"
+    ],
+    "Cruiser RV": [
+      "Avenir",
+      "Embrace",
+      "Enterra",
+      "Funfinder",
+      "Hitch",
+      "MPG",
+      "Radiance",
+      "Shadow Cruiser",
+      "Stryker",
+      "Twilight",
+      "ViewFinder"
+    ],
+    "Curtis": [
+      "Dunes"
+    ],
+    "Dune Sport": [
+      "Man Cave",
+      "Phoenix Hauler"
+    ],
+    "Dutchman": [
+      "Endurance"
+    ],
+    "Dutchmen": [
+      "Adirondack",
+      "Aerolite",
+      "Aristocrat",
+      "Aspen Trail",
+      "Astoria",
+      "Atlas",
+      "Classic",
+      "Coleman",
+      "Coleman Lantern/Lantern LT",
+      "Coleman Lite/Lite LX",
+      "Colorado Dutchmen",
+      "Denali",
+      "Dutchmen",
+      "Eco",
+      "Eddie Bauer Signature",
+      "Freedom Spirit",
+      "Guide",
+      "Kodiak",
+      "Lite",
+      "N-Tense",
+      "Rainier",
+      "Razorback",
+      "Rubicon",
+      "Sport",
+      "Tab",
+      "Tada",
+      "Tundra",
+      "Wild Thing",
+      "Winner's Circle"
+    ],
+    "Dynamite DBA Man Cave": [
+      "Man Cave"
+    ],
+    "EarthBound": [
+      "Copper Mountain",
+      "Dakota",
+      "Dillon",
+      "Montreal",
+      "Morrison",
+      "Red Rock",
+      "Telluride"
+    ],
+    "East To West": [
+      "Alta Series",
+      "Della Terra",
+      "Longitude",
+      "Silver Lake"
+    ],
+    "Echo": [
+      "Bandit",
+      "North Bay"
+    ],
+    "Eclipse": [
+      "Attitude",
+      "Evolution",
+      "Iconic",
+      "Milan",
+      "Stellar"
+    ],
+    "Eco Camp": [
+      "Eco Camp"
+    ],
+    "Eggcamper": [
+      "Eggcamper"
+    ],
+    "Ember RV": [
+      "E-Series",
+      "Overland Series",
+      "Touring Edition"
+    ],
+    "Encore": [
+      "Rog"
+    ],
+    "Endura Max RV": [
+      "Track Trail"
+    ],
+    "Entegra": [
+      "Arc"
+    ],
+    "Escape Trailers": [
+      "Escape"
+    ],
+    "Evergreen": [
+      "Amped",
+      "Ascend",
+      "Element",
+      "Ever-Lite",
+      "Reactor",
+      "Sun Valley",
+      "Texan",
+      "i-Go"
+    ],
+    "Excel - Peterson": [
+      "Winslow"
+    ],
+    "Extreme": [
+      "MONTEREY",
+      "Mega-Lite",
+      "Roadranger",
+      "Sportsmaster"
+    ],
+    "Fiber-Lite": [
+      "Side Kick"
+    ],
+    "Flagstaff": [
+      "Classic",
+      "E-Pro",
+      "Micro Lite",
+      "Shamrock",
+      "Super Lite",
+      "V-Lite Series"
+    ],
+    "Fleetwood": [
+      "BackPack",
+      "Compass",
+      "Dakota",
+      "Gearbox",
+      "Mallard",
+      "Nitrous",
+      "Orbit",
+      "Pegasus",
+      "Pioneer",
+      "Pride",
+      "Prowler",
+      "Redline",
+      "Regal",
+      "Terry",
+      "Wilderness"
+    ],
+    "Forest River": [
+      "All American Sport",
+      "Aurora",
+      "Campsite Reserve",
+      "Campsite Ultra",
+      "Cardinal",
+      "Cedar Creek",
+      "Cedar Creek Cottage",
+      "Cherokee",
+      "Cherokee Cascade",
+      "Cherokee Rogue (all Rogue models)",
+      "Cherokee Vengeance",
+      "EVO",
+      "Flagstaff",
+      "Flagstaff Classic Series",
+      "Flagstaff Micro-Lite",
+      "Flagstaff Shamrock",
+      "Grand Lodge",
+      "Grand Surveyor",
+      "Hemisphere Lite",
+      "Heritage Glen",
+      "Ibex",
+      "Impression",
+      "Independence Trail",
+      "LaCross",
+      "Nightfall",
+      "No Boundaries",
+      "Ozark",
+      "Patriot",
+      "Pilot- Spirit of St. Louis",
+      "R-Pod",
+      "Ranier",
+      "Rockwood",
+      "Salem",
+      "Salem Cruise Lite",
+      "Salem FSX",
+      "Salem Grand Villa",
+      "Salem Hemisphere",
+      "Salem Ice Cabin",
+      "Salem Lite",
+      "Salem Villa",
+      "Sandpiper",
+      "Sandstorm",
+      "Shockwave",
+      "Sierra",
+      "Sonoma",
+      "Stealth",
+      "Surveyor",
+      "Timberwolf",
+      "Tracer",
+      "V-Cross",
+      "Vengeance",
+      "Vengeance Rogue",
+      "Vibe",
+      "Viking",
+      "Westbrook",
+      "Wildcat",
+      "Wildwood",
+      "Work and Play",
+      "XLR",
+      "XLR Hyperlite"
+    ],
+    "Four winds": [
+      "Breeze",
+      "Classic",
+      "Four Winds"
+    ],
+    "Franklin": [
+      "Franklin"
+    ],
+    "Frontier": [
+      "Aspen",
+      "Explorer",
+      "HyperLite"
+    ],
+    "General Coach Works": [
+      "Citation"
+    ],
+    "Genesis Supreme": [
+      "Genesis",
+      "Sandsport"
+    ],
+    "Genesis Supreme RV": [
+      "Vortex"
+    ],
+    "Gidget": [
+      "Teardrop"
+    ],
+    "Glacier Bay": [
+      "Glacier Edge"
+    ],
+    "Glendale": [
+      "Golden Falcon"
+    ],
+    "Grand Design": [
+      "Imagine",
+      "Momentum",
+      "Reflection",
+      "Serenova",
+      "Transcend"
+    ],
+    "Gulf Stream": [
+      "Ameri*lite",
+      "Cabin Cruiser",
+      "Canyon Trail",
+      "Capri",
+      "Cavalier",
+      "Conquest",
+      "Emerald Bay",
+      "Enlighten",
+      "Envision",
+      "Firefly",
+      "Friendship",
+      "G-Force",
+      "Geo",
+      "Gulf Breeze",
+      "Innsbruck",
+      "Kingsport",
+      "Mako",
+      "Mini SL",
+      "Sedona",
+      "Stream Lite",
+      "Track & Trail",
+      "TrailMaster",
+      "Vintage Cruiser",
+      "Vista",
+      "Vista Cruiser",
+      "Yellowstone"
+    ],
+    "Happier Camper": [
+      "HC1"
+    ],
+    "Harbor View": [
+      "Harbor View"
+    ],
+    "Heartland": [
+      "Caliber",
+      "Cedar Ridge",
+      "Corterra",
+      "Country Ridge",
+      "Cyclone",
+      "Eddie Bauer",
+      "Edge",
+      "Fairfield",
+      "Focus",
+      "Fuel",
+      "Lithium",
+      "MPG",
+      "Mallard",
+      "North Country",
+      "North Trail",
+      "Pioneer",
+      "Prowler",
+      "Razor",
+      "Resort",
+      "Sundance",
+      "Terry",
+      "Torque",
+      "Trail Runner",
+      "Wilderness"
+    ],
+    "Helio": [
+      "O3"
+    ],
+    "Heritage One": [
+      "Due West",
+      "Ground Control"
+    ],
+    "Hi-Lo": [
+      "2510",
+      "Tow Lite"
+    ],
+    "Highland Ridge": [
+      "Range Lite"
+    ],
+    "Highland Ridge RV": [
+      "Highlander",
+      "Journeyer",
+      "Light",
+      "Mesa Ridge",
+      "Olympia",
+      "Open Range",
+      "Roamer",
+      "Silverstar (incl. all sub models)",
+      "Ultra Light"
+    ],
+    "HL Enterprise": [
+      "Georgian Bay"
+    ],
+    "Holiday Rambler": [
+      "Aluma-lite",
+      "Alumascape",
+      "Black Diamond",
+      "CampMaster",
+      "Mintaro",
+      "Next Level",
+      "Presidential",
+      "Savoy",
+      "Traveler"
+    ],
+    "Hoosier": [
+      "Maverick"
+    ],
+    "Hy-Line": [
+      "Hy-Line"
+    ],
+    "Hymer": [
+      "Grand Touring"
+    ],
+    "Ice Castle": [
+      "Fish Houses"
+    ],
+    "Imperial Outdoors": [
+      "XploreRV (all X series)"
+    ],
+    "Innovator": [
+      "2125RB"
+    ],
+    "Intech": [
+      "Oasis"
+    ],
+    "InTech RV": [
+      "Aucta Series",
+      "Chase Flyer",
+      "Discover Flyer",
+      "Explore Flyer",
+      "Luna",
+      "OVR Expedition",
+      "OVR Navigate",
+      "Pursue Flyer",
+      "Sol Dawn",
+      "Sol Dusk",
+      "Sol Eclipse",
+      "Sol Horizon",
+      "Terra Willow"
+    ],
+    "Jayco": [
+      "Eagle",
+      "Hummingbird",
+      "Jay Feather",
+      "Jay Flight",
+      "Octane",
+      "Skylark",
+      "Starcraft",
+      "Talon",
+      "White Hawk"
+    ],
+    "Kaddy Kruiser": [
+      "KDX",
+      "Summer Suite"
+    ],
+    "Keystone": [
+      "Arcadia",
+      "Bullet",
+      "Bullet Colt",
+      "Bullet Crossfire",
+      "Carbon",
+      "Copper Canyon",
+      "Cougar",
+      "CrossFire",
+      "Energy",
+      "Fireside",
+      "Freedom Elite",
+      "Fuzion",
+      "Hideout",
+      "Hobbi",
+      "Hornet",
+      "Impact",
+      "Laredo",
+      "Montana Mountaineer",
+      "NRG",
+      "Outback",
+      "Outback Super-Lite",
+      "Outback Terrain",
+      "Outback Ultra-Lite",
+      "Passport",
+      "Premier",
+      "Raptor",
+      "Reign",
+      "Residence",
+      "Retreat",
+      "Springdale",
+      "Sprinter",
+      "Summerland",
+      "VR1",
+      "Vantage",
+      "Zepplin"
+    ],
+    "Kiefer Built": [
+      "Kiefer Built"
+    ],
+    "Kimberly Kamper": [
+      "Karavan Classic",
+      "Karavan Eco-Suite",
+      "Kruiser E-Class",
+      "Kruiser S-Class",
+      "Kruiser T-Class"
+    ],
+    "Komfort": [
+      "27TSR",
+      "Komfort",
+      "M-27TS",
+      "M-27TSR",
+      "M26TS",
+      "Resort",
+      "Trailblazer"
+    ],
+    "KZ": [
+      "Confluence",
+      "Connect",
+      "Coyote",
+      "Domani",
+      "Durango",
+      "Escape",
+      "Inferno",
+      "Jag",
+      "MXT",
+      "Sportsmen",
+      "Spree",
+      "Vision"
+    ],
+    "Lance": [
+      "Lance"
+    ],
+    "Lighthouse": [
+      "Lighthouse"
+    ],
+    "Lil' Snoozy": [
+      "Lil' Snoozy"
+    ],
+    "Little Guy": [
+      "Max",
+      "Meerkat",
+      "Micro Max",
+      "Mini Max",
+      "Platform",
+      "T@B",
+      "T@G"
+    ],
+    "LIV": [
+      "13BH",
+      "17FD",
+      "201 Series",
+      "26RBS"
+    ],
+    "Livin' Lite": [
+      "Axxess",
+      "Camp Lite",
+      "Ignite",
+      "QuickSilver"
+    ],
+    "Marathon": [
+      "Marathon",
+      "Olympian"
+    ],
+    "McKenzie": [
+      "Dune Chaser",
+      "Dune Seeker",
+      "Ion",
+      "Lakota",
+      "Rainer",
+      "Star-Lite",
+      "Starwood"
+    ],
+    "MDC": [
+      "Island",
+      "Overland"
+    ],
+    "Millennium": [
+      "Millennium"
+    ],
+    "Mirage": [
+      "Balboa"
+    ],
+    "Mity-Lite": [
+      "Mity-lite"
+    ],
+    "MVP": [
+      "Coast",
+      "Envy",
+      "Impact",
+      "Sonoma",
+      "Summit",
+      "Vortex"
+    ],
+    "National": [
+      "Rage'N"
+    ],
+    "New Horizons": [
+      "New Horizons"
+    ],
+    "Newmar": [
+      "X-Aire"
+    ],
+    "Northland": [
+      "Northland"
+    ],
+    "Northwood": [
+      "Arctic Fox",
+      "Desert Fox",
+      "Fox Creek",
+      "Nash",
+      "Northwind",
+      "Snow River"
+    ],
+    "NuCamp": [
+      "Avia",
+      "Barefoot",
+      "Haven",
+      "T@B",
+      "T@G XL Boondock Edge"
+    ],
+    "Obi Conqueror": [
+      "Dweller Series"
+    ],
+    "Off Grid": [
+      "Expedition"
+    ],
+    "Oliver": [
+      "Legacy Elite",
+      "Legacy Elite II",
+      "Sport"
+    ],
+    "Open Range": [
+      "Journeyer",
+      "Light",
+      "Mesa Ridge",
+      "Roamer"
+    ],
+    "Opus": [
+      "OP15"
+    ],
+    "Outdoors RV": [
+      "Back Country",
+      "Black Rock",
+      "Black Stone",
+      "Creek Side",
+      "Mountain Trax",
+      "Tamarack Trail",
+      "Timberidge",
+      "Trail Series",
+      "Wind River"
+    ],
+    "Pacific Coach Works": [
+      "Blaze'n",
+      "Econ",
+      "Mighty Lite",
+      "Northland",
+      "Pacifica",
+      "Panther",
+      "Powerlite",
+      "Rage'N",
+      "Sandsport",
+      "Sea Breeze",
+      "Surf Side",
+      "Tango"
+    ],
+    "Pacific Coachworks": [
+      "Surf Side Xtralite"
+    ],
+    "Palomino": [
+      "Canyon Cat",
+      "Gazelle",
+      "PaloMini",
+      "Pause",
+      "Puma",
+      "Real-lite",
+      "Revolve",
+      "Sabre",
+      "Solaire",
+      "Stampede",
+      "Thoroughbred"
+    ],
+    "PeeWee": [
+      "Half Pint"
+    ],
+    "Pilgrim": [
+      "Cirrus",
+      "Legends",
+      "Open Road",
+      "Pilgrim"
+    ],
+    "Play-Mor": [
+      "Sport Deluxe"
+    ],
+    "Prime Time": [
+      "Avenger",
+      "Fury"
+    ],
+    "Prolite": [
+      "Evasion",
+      "Lounge"
+    ],
+    "Puma": [
+      "Puma Vista"
+    ],
+    "R-Vision": [
+      "Bay Toy Hauler",
+      "Boogie Box",
+      "Crossover",
+      "Max-Lite",
+      "Onyx",
+      "R-Wagon",
+      "Silver Creek",
+      "Super Sport",
+      "Trail-Bay",
+      "Trail-Cruiser",
+      "Trail-Lite",
+      "Trail-Sport",
+      "Trail-Vision"
+    ],
+    "Recreation By Design": [
+      "Luxury By Design",
+      "Monte Carlo",
+      "Navigation",
+      "North American",
+      "Travel By Design"
+    ],
+    "Riverside": [
+      "Dream",
+      "Intrepid",
+      "Mt. Mckinley",
+      "RPM",
+      "Retro",
+      "Retro 166",
+      "Riverside",
+      "White Water",
+      "Xplorer"
+    ],
+    "Roadmaster": [
+      "Predator",
+      "R-Sport"
+    ],
+    "Rockwood": [
+      "Geo Pro",
+      "Mini Lite",
+      "Roo Series",
+      "Signature",
+      "Ultra Lite",
+      "Windjammer"
+    ],
+    "Safari Condo": [
+      "Alto"
+    ],
+    "Scamp": [
+      "Scamp"
+    ],
+    "Serro": [
+      "Scotty"
+    ],
+    "Shasta": [
+      "Airflyte",
+      "Flyte",
+      "Oasis",
+      "Revere",
+      "Shasta"
+    ],
+    "SignaTours": [
+      "Biscayne",
+      "Rockledge",
+      "Venice"
+    ],
+    "Skyline": [
+      "Aljo",
+      "Bobcat",
+      "Freestyle",
+      "Koala",
+      "Layton",
+      "Malibu",
+      "Mountain View",
+      "Nomad",
+      "Skycat",
+      "Texan",
+      "Trailrider",
+      "Trident",
+      "Wagoneer",
+      "Walkabout",
+      "Weekender"
+    ],
+    "Space Craft": [
+      "Residential",
+      "Space Craft"
+    ],
+    "Sportsmen": [
+      "Coyote",
+      "Frontier",
+      "Sportster"
+    ],
+    "Starcraft": [
+      "AR-One",
+      "AR-One Maxx",
+      "Antigua",
+      "Aruba",
+      "Autumn Ridge",
+      "Autumn Ridge Mini",
+      "Avalon",
+      "Comet Mini",
+      "GPS",
+      "GSL",
+      "Homestead",
+      "Launch",
+      "Launch Mini",
+      "Lexion",
+      "Mossy Oak",
+      "ST Series",
+      "Satellite",
+      "Star Stream",
+      "Super Lite",
+      "Travelstar",
+      "Villa",
+      "XP Series"
+    ],
+    "Stealth Trailers": [
+      "Nomad"
+    ],
+    "Sun Valley": [
+      "Bridgeport",
+      "Extreme",
+      "Rattler",
+      "Roadrunner Series",
+      "Sunlite",
+      "X-treme"
+    ],
+    "Sundowner": [
+      "Sunlite",
+      "Trailblazer"
+    ],
+    "Sunline": [
+      "Solaris",
+      "Transport"
+    ],
+    "SunnyBrook": [
+      "Brookside",
+      "Edgewater",
+      "Harmony",
+      "Mobile Scout",
+      "Sunset Creek",
+      "Titan"
+    ],
+    "Sunray": [
+      "Smokey"
+    ],
+    "Sunset Park": [
+      "EZ Traveler",
+      "Rush",
+      "Sun-Lite",
+      "Sunray"
+    ],
+    "SylvanSport": [
+      "Vast"
+    ],
+    "T@B": [
+      "T@B"
+    ],
+    "Taxa Outdoors": [
+      "Cricket",
+      "Mantis"
+    ],
+    "Taylor": [
+      "Codester"
+    ],
+    "Taylor Coach": [
+      "24' Side Door"
+    ],
+    "Thor": [
+      "Fury",
+      "Jazz",
+      "Skamper",
+      "Tahoe",
+      "Transport Series",
+      "Twilight",
+      "Vortex",
+      "Wave"
+    ],
+    "Thor America": [
+      "Chateau",
+      "Citation",
+      "Corsair"
+    ],
+    "Thor California": [
+      "Sonoma",
+      "Summit",
+      "Wanderer"
+    ],
+    "Timberland": [
+      "Riverside",
+      "Timberlodge",
+      "Wedge"
+    ],
+    "Trail-Lite": [
+      "Bantam",
+      "Crossover",
+      "Trail-Cruiser"
+    ],
+    "Trailmanor": [
+      "Elkmont",
+      "Sport Series",
+      "Trailmanor"
+    ],
+    "Trails West": [
+      "Classic",
+      "LQ Horse Trailer",
+      "RPM Freeride",
+      "Santa Fe",
+      "Sierra"
+    ],
+    "Travel Lite": [
+      "Aura",
+      "Evoke",
+      "Falcon",
+      "Idea",
+      "Rove Lite",
+      "Travel Lite"
+    ],
+    "Travel Supreme": [
+      "River Canyon"
+    ],
+    "Trillium": [
+      "Outback"
+    ],
+    "Triple E": [
+      "Topaz"
+    ],
+    "Ultimate Toys": [
+      "Ultimate Camper"
+    ],
+    "United Recreational Vehicles": [
+      "ICamp"
+    ],
+    "Venture": [
+      "Stratus"
+    ],
+    "Venture RV": [
+      "Sienna",
+      "Sonic",
+      "Sonic Lite",
+      "Sport Trek"
+    ],
+    "Vintage": [
+      "Conversion series"
+    ],
+    "VRV": [
+      "XTR"
+    ],
+    "Wayfinder": [
+      "Go Explore",
+      "Go Lite",
+      "Go Play"
+    ],
+    "Weekend Warrior": [
+      "Super Lite Toy Hauler Series",
+      "Toy Hauler Series"
+    ],
+    "Weis Craft": [
+      "Little Joe",
+      "Rough Neck"
+    ],
+    "west Coast": [
+      "Baja X-Terra"
+    ],
+    "Winnebago": [
+      "Access",
+      "Hike",
+      "Instinct",
+      "M-Series",
+      "Micro Minnie",
+      "Micro Minnie FLX",
+      "Minnie",
+      "Minnie Drop",
+      "Minnie Plus",
+      "One",
+      "Raven",
+      "Remington",
+      "Spyder",
+      "Thrive",
+      "Ultralite",
+      "Voyage",
+      "Winnie Drop"
+    ],
+    "Yetti": [
+      "Grand Escape",
+      "Traxx"
+    ]
+  },
+  "Trailer Fifth Wheel": {
+    "Alfa": [
+      "Gold",
+      "See Ya",
+      "Sun",
+      "Toyhouse"
+    ],
+    "Aliner": [
+      "Classic"
+    ],
+    "Aljo": [
+      "Brazos",
+      "Lite",
+      "Rampage"
+    ],
+    "Allen": [
+      "Idle-Time"
+    ],
+    "Alliance": [
+      "Avenue"
+    ],
+    "Alliance RV": [
+      "Paradigm",
+      "Valor"
+    ],
+    "AlpenLite": [
+      "Aspen",
+      "Augusta",
+      "Defender",
+      "Doral",
+      "Hillcrest",
+      "Limited",
+      "Medinah",
+      "Portofino",
+      "Riviera",
+      "Shore Cliff",
+      "Versailles",
+      "Voyager"
+    ],
+    "Ameri-Camp": [
+      "Ameri-Camp"
+    ],
+    "American Freedom": [
+      "American Freedom"
+    ],
+    "American Rv": [
+      "Americana Sequoyah"
+    ],
+    "American Spirit": [
+      "American Spirit"
+    ],
+    "Arctic Fox": [
+      "29-5k",
+      "295T"
+    ],
+    "ATC": [
+      "ARV",
+      "Game Changer Pro Series",
+      "Pla",
+      "Quest"
+    ],
+    "Augusta": [
+      "Ambition",
+      "Flex",
+      "Luxe"
+    ],
+    "Bison": [
+      "Desperado",
+      "Premier",
+      "Ranger",
+      "Stratus",
+      "Trail Express",
+      "Trail Hand"
+    ],
+    "Bloomer Trailers": [
+      "All LQ Horse Trailers"
+    ],
+    "Brinkley": [
+      "Model G",
+      "Model Z"
+    ],
+    "Campmaster": [
+      "MURT Series"
+    ],
+    "Carriage": [
+      "Cabo",
+      "Cameo",
+      "Carri Lite",
+      "Compass",
+      "Domani",
+      "Royals International"
+    ],
+    "Chattanooga": [
+      "Adroit",
+      "Lookout",
+      "Lookout XL",
+      "Lookout XLT",
+      "Mover Series",
+      "Outlander",
+      "View",
+      "View XL"
+    ],
+    "Cherokee": [
+      "Wolf Pack"
+    ],
+    "Cherokee Horse Trailers": [
+      "Superchief",
+      "Tomahawk"
+    ],
+    "Cimarron": [
+      "Norstar"
+    ],
+    "Coachmen": [
+      "Adrenaline",
+      "Brookstone",
+      "Capri",
+      "Catalina",
+      "Chaparral",
+      "North Ridge",
+      "Somerset Dream Catcher",
+      "Spirit of America",
+      "Wyoming"
+    ],
+    "CrossRoads": [
+      "Altitude",
+      "Cameo",
+      "Carriage",
+      "Cross Terrain",
+      "Cruiser",
+      "Cruiser Aire",
+      "Elevation",
+      "Hill Country",
+      "Kingston",
+      "Longhorn Rezerve",
+      "Paradise Point",
+      "Redwood",
+      "Rezerve",
+      "Rushmore",
+      "Seville",
+      "Silverado",
+      "Sunset Trail",
+      "Volante",
+      "Zinger"
+    ],
+    "Cruiser RV": [
+      "Boss",
+      "Essence",
+      "South Fork",
+      "Stryker"
+    ],
+    "Double Tree": [
+      "Elite Suites",
+      "Mobile Suite"
+    ],
+    "DRV": [
+      "Elite Suites",
+      "Full House",
+      "Mobile Suites",
+      "Mobile Suites Aire",
+      "Tradition"
+    ],
+    "Dune Sport": [
+      "Man Cave"
+    ],
+    "Dutchmen": [
+      "Aerolite",
+      "Astoria",
+      "Atlas",
+      "Classic",
+      "Coleman",
+      "Colorado",
+      "Denali",
+      "Dutchmen",
+      "Eco",
+      "Eddie Bauer Signature",
+      "Endurance",
+      "Grand Junction",
+      "Infinity",
+      "Monte Vista",
+      "N-Tense",
+      "North Shore",
+      "Tundra",
+      "Victory Lane",
+      "Voltage",
+      "Wild Thing",
+      "Winner's Circle",
+      "Yukon"
+    ],
+    "Dynamax": [
+      "Trilogy"
+    ],
+    "Dynamite": [
+      "Firestorm"
+    ],
+    "EarthBound": [
+      "Golden Ridge"
+    ],
+    "East To West": [
+      "Ahara",
+      "Blackthorn",
+      "Takoda",
+      "Tandara"
+    ],
+    "Eclipse": [
+      "Attitude",
+      "Iconic",
+      "Milan",
+      "Stellar"
+    ],
+    "Endura Max RV": [
+      "Wide Open"
+    ],
+    "Entegra": [
+      "Entimidator"
+    ],
+    "Escape Trailers": [
+      "5",
+      "Escape"
+    ],
+    "Evergreen": [
+      "Bay Hill",
+      "Ever-Lite",
+      "Lifestyle",
+      "Tesla"
+    ],
+    "Excel - Peterson": [
+      "Winslow"
+    ],
+    "Excel- Peterson": [
+      "Excel",
+      "Excel Classic",
+      "Limited Edition",
+      "Rebel Trekker"
+    ],
+    "Exiss": [
+      "6308 LQ-3H",
+      "Big Sky",
+      "Endeavor",
+      "Escape"
+    ],
+    "Extreme": [
+      "MONTEREY",
+      "Mega-Lite"
+    ],
+    "Featherlite": [
+      "Legend Model 8542",
+      "Legend Model 8582",
+      "SURV"
+    ],
+    "Flagstaff": [
+      "Classic",
+      "E-Pro Toy Hauler",
+      "Super Lite"
+    ],
+    "Fleetwood": [
+      "Dakota",
+      "Expedition",
+      "Formula",
+      "Gearbox",
+      "Prowler",
+      "Quantum",
+      "Redline",
+      "Regal",
+      "Terry",
+      "Triumph",
+      "Wilderness"
+    ],
+    "Forest River": [
+      "All American Sport",
+      "Arctic Wolf",
+      "Black Diamond",
+      "Blue Ridge",
+      "Campsite Elite",
+      "Cardinal",
+      "Cedar Creek",
+      "Cherokee",
+      "Cherokee Vengeance",
+      "Crusader",
+      "Flagstaff",
+      "Grand Surveyor",
+      "Heritage Glen",
+      "Impression",
+      "Riverstone",
+      "Rockwood",
+      "Sabre",
+      "Salem",
+      "Salem Hemisphere",
+      "Salem Lite",
+      "Sandpiper",
+      "Sandstorm",
+      "Shockwave",
+      "Sierra",
+      "Sprinter",
+      "Stealth",
+      "Surveyor",
+      "V-Cross",
+      "Vengeance",
+      "Vengeance Rogue Armored",
+      "Wildcat",
+      "Wildwood",
+      "Work and Play",
+      "XLR",
+      "XLR Nitro"
+    ],
+    "Four winds": [
+      "Classic",
+      "Four Winds"
+    ],
+    "Franklin": [
+      "Ranchwagon"
+    ],
+    "Frontier": [
+      "Aspen",
+      "Explorer",
+      "Tazor"
+    ],
+    "General Coach": [
+      "Corsair"
+    ],
+    "Genesis Supreme": [
+      "Blazen",
+      "Genesis",
+      "Sandsport Overnighter"
+    ],
+    "Genesis Supreme RV": [
+      "Vortex"
+    ],
+    "Glacier Bay": [
+      "Glacier Bay"
+    ],
+    "Glendale": [
+      "Golden Falcon",
+      "Titanium"
+    ],
+    "Grand Design": [
+      "Influence",
+      "Momentum",
+      "Reflection",
+      "Solitude"
+    ],
+    "Gulf Stream": [
+      "Aztec",
+      "Canyon Trail",
+      "Enduramax",
+      "G-Force",
+      "Innsbruck",
+      "Kingsport",
+      "Mako",
+      "Prairie Schooner",
+      "Sedona",
+      "Yellowstone"
+    ],
+    "Heartland": [
+      "Big Country",
+      "Bighorn",
+      "Bighorn Traveler",
+      "Corterra",
+      "Cyclone",
+      "Eagle Ridge",
+      "Eddie Bauer",
+      "Edge",
+      "Elk Ridge",
+      "Fuel",
+      "Gateway",
+      "Gravity",
+      "Greystone",
+      "Landmark",
+      "Milestone",
+      "North Peak",
+      "North Trail",
+      "Oakmont",
+      "Pioneer",
+      "Prowler",
+      "Razor",
+      "Road Warrior",
+      "Silverado",
+      "Sundance",
+      "Torque"
+    ],
+    "Highland Ridge": [
+      "Silverstar",
+      "Ultra Lite"
+    ],
+    "Highland Ridge RV": [
+      "Highlander",
+      "Light",
+      "Mesa Ridge",
+      "Open Range",
+      "Open Range 3X",
+      "Roamer",
+      "Silverstar (incl. all sub models)"
+    ],
+    "Holiday Rambler": [
+      "Aluma-lite",
+      "Alumascape",
+      "Next Level",
+      "Presidential",
+      "Savoy",
+      "Vacationer"
+    ],
+    "Hoosier": [
+      "Desperado",
+      "Maverick"
+    ],
+    "Ice Castle": [
+      "Fish Houses"
+    ],
+    "Infinity": [
+      "Infinity"
+    ],
+    "Integrity": [
+      "Legacy"
+    ],
+    "Jayco": [
+      "Designer",
+      "Eagle",
+      "Jay Flight",
+      "Legacy",
+      "North Point",
+      "Pinnacle",
+      "Recon",
+      "Seismic",
+      "Talon"
+    ],
+    "Kaddy Kruiser": [
+      "Summer Suite"
+    ],
+    "Keystone": [
+      "Alpine",
+      "Arcadia",
+      "Avalanche",
+      "Big Sky",
+      "Bullet",
+      "Cambridge",
+      "Carbon",
+      "Challenger",
+      "Copper Canyon",
+      "Cougar",
+      "Everest",
+      "Fuzion",
+      "Hideout",
+      "Hornet",
+      "Impact",
+      "Laredo",
+      "Montana",
+      "Montana Big Sky",
+      "Montana High Country",
+      "Montana Mountaineer",
+      "Outback",
+      "Passport",
+      "Raptor",
+      "Springdale",
+      "Sprinter",
+      "Sydney",
+      "Tail-gator"
+    ],
+    "Kiefer Built": [
+      "Kiefer Built"
+    ],
+    "King Of The Road": [
+      "Crown Marquis",
+      "Royal Villa",
+      "Royalite"
+    ],
+    "Komfort": [
+      "Komfort",
+      "M-27TS",
+      "M26TS",
+      "Trailblazer"
+    ],
+    "KZ": [
+      "Durango",
+      "Escalade",
+      "Inferno",
+      "Jag",
+      "Montego Bay",
+      "Ridgeway",
+      "Sidewinder",
+      "Sportsmen",
+      "Spree",
+      "StoneRidge",
+      "Venom"
+    ],
+    "Lakota": [
+      "Bighorn",
+      "Charger",
+      "Grande"
+    ],
+    "Lance": [
+      "865"
+    ],
+    "Lifestyle RV": [
+      "Alfa Gold",
+      "Lifestyle"
+    ],
+    "Livin' Lite": [
+      "Alumalite"
+    ],
+    "Logan Coach": [
+      "Razor"
+    ],
+    "Man Cave RV": [
+      "FW30 Series"
+    ],
+    "Marathon": [
+      "Marathon",
+      "Olympian"
+    ],
+    "McKenzie": [
+      "Cascade",
+      "Dune Chaser",
+      "Lakota",
+      "Medallion",
+      "Starwood"
+    ],
+    "Merhow": [
+      "Next Generation",
+      "Verylite"
+    ],
+    "Millennium": [
+      "Millennium"
+    ],
+    "Mity-Lite": [
+      "Mity-lite"
+    ],
+    "MVP": [
+      "Destiny",
+      "Jazz",
+      "Vortex"
+    ],
+    "New Horizons": [
+      "Five Star",
+      "Majestic",
+      "New Horizons",
+      "Summit"
+    ],
+    "Newmar": [
+      "American Star",
+      "Cypress",
+      "Kountry Aire",
+      "Kountry Star",
+      "Mountain Aire",
+      "Torrey Pine",
+      "X-Aire"
+    ],
+    "Northwood": [
+      "Arctic Fox",
+      "Desert Fox",
+      "Fox Mountain",
+      "Nash",
+      "Snow River"
+    ],
+    "Nu Wa": [
+      "HitchHiker Champagne",
+      "HitchHiker Discover America",
+      "Hitchhiker II",
+      "Hitchiker",
+      "Hitchiker Premier"
+    ],
+    "Open Range": [
+      "3X",
+      "Journeyer",
+      "Light",
+      "Mesa Ridge",
+      "Open Range",
+      "Residential",
+      "Roamer",
+      "Rolling Thunder"
+    ],
+    "Outdoors RV": [
+      "Glacier Peak",
+      "Wind River"
+    ],
+    "Pacific Coach Works": [
+      "Blaze'n",
+      "Pacifica",
+      "Powerlite",
+      "Rage'N",
+      "Sandsport",
+      "Turbo"
+    ],
+    "Palomino": [
+      "Columbus",
+      "Palomino",
+      "Puma",
+      "Revelation",
+      "River Ranch",
+      "Sabre"
+    ],
+    "Pilgrim": [
+      "Legends",
+      "Open Road",
+      "Pilgrim"
+    ],
+    "Platinum Coach": [
+      "Outlaw"
+    ],
+    "Play-Mor": [
+      "Motorsport",
+      "Play-Mor",
+      "Renegade",
+      "Sport Deluxe",
+      "Sportster"
+    ],
+    "Premier": [
+      "Bison"
+    ],
+    "Prime Time": [
+      "Spartan"
+    ],
+    "R-Vision": [
+      "Trail-Bay",
+      "Trail-Cruiser",
+      "Trail-Lite",
+      "Trail-Vision"
+    ],
+    "Rage'N": [
+      "Stryker"
+    ],
+    "Recreation By Design": [
+      "Luxury By Design",
+      "Monte Carlo",
+      "North American",
+      "Travel By Design"
+    ],
+    "Redwood": [
+      "Redwood"
+    ],
+    "Riverside": [
+      "Retro"
+    ],
+    "Rockwood": [
+      "Signature",
+      "Ultra Lite"
+    ],
+    "Rugged Mountain Custom RV": [
+      "Carpathian"
+    ],
+    "Scamp": [
+      "Scamp"
+    ],
+    "Shadow Trailer": [
+      "Pro Series"
+    ],
+    "Shasta": [
+      "Phoenix"
+    ],
+    "Silver Lite": [
+      "Spirit"
+    ],
+    "Skyline": [
+      "Koala",
+      "Layton",
+      "Malibu",
+      "Mountain View",
+      "Nomad",
+      "Walkabout"
+    ],
+    "SMC": [
+      "Laramie Horse Trailer"
+    ],
+    "Space Craft": [
+      "Residential",
+      "Space Craft"
+    ],
+    "Sportsmen": [
+      "Frontier",
+      "New Vision",
+      "Sportster"
+    ],
+    "Starcraft": [
+      "AR-One Maxx",
+      "Aruba",
+      "GSL",
+      "Homestead",
+      "Lexion",
+      "Solstice",
+      "Telluride",
+      "Telluride 251RES",
+      "Travel Star"
+    ],
+    "Sun Valley": [
+      "Rattler",
+      "Roadrunner Series",
+      "Sun Lite",
+      "X-treme"
+    ],
+    "Sundowner": [
+      "Grand Signature",
+      "Horizon",
+      "Sierra",
+      "Trailblazer"
+    ],
+    "SunnyBrook": [
+      "Bristol Bay",
+      "Brookside",
+      "Edgewater",
+      "Harmony",
+      "Mobile Scout",
+      "Sunset Creek",
+      "Titan",
+      "West Pointe"
+    ],
+    "Teton": [
+      "Experience",
+      "Grand",
+      "Laramie",
+      "Reliance",
+      "Royale"
+    ],
+    "The RV Factory": [
+      "Luxe"
+    ],
+    "Thor": [
+      "Citation",
+      "Jazz",
+      "Tahoe",
+      "Transport Series",
+      "Vortex",
+      "Wave"
+    ],
+    "Thor America": [
+      "Chateau",
+      "Citation"
+    ],
+    "Thor California": [
+      "Wanderer"
+    ],
+    "Timberland": [
+      "Riverside",
+      "Timberlodge"
+    ],
+    "Trail-Lite": [
+      "Trail-Bay",
+      "Trail-Cruiser"
+    ],
+    "Trails West": [
+      "Classic",
+      "LQ Horse Trailer",
+      "Santa Fe",
+      "Sierra",
+      "Trail Creek"
+    ],
+    "Travel Supreme": [
+      "Express",
+      "River Canyon",
+      "Travel Supreme"
+    ],
+    "Triple E": [
+      "Topaz"
+    ],
+    "Vanguard": [
+      "Kodiak"
+    ],
+    "Vanleigh RV": [
+      "Ambition",
+      "Beacon",
+      "Pinecrest",
+      "Vilano"
+    ],
+    "Venture RV": [
+      "Sport Trek"
+    ],
+    "Vintage": [
+      "Car Hauler"
+    ],
+    "Weekend Warrior": [
+      "Super Lite Toy Hauler Series",
+      "Toy Hauler Series"
+    ],
+    "west Coast": [
+      "Baja X-Terra",
+      "Charger"
+    ],
+    "Western": [
+      "Alpenlite",
+      "Villa"
+    ],
+    "Winnebago": [
+      "Destination",
+      "Lattitude",
+      "Lite Five",
+      "Micro Minnie",
+      "Minnie Plus",
+      "Raven",
+      "Scorpion",
+      "Spyder",
+      "Voyage"
+    ],
+    "Yellowstone": [
+      "Ridgeline"
+    ]
+  },
+  "Trailer Pop-up": {
+    "Aliner": [
+      "Classic",
+      "Evolution 12",
+      "Evolution 15",
+      "Expedition",
+      "Ranger",
+      "Scout",
+      "Sportliner",
+      "Titanium"
+    ],
+    "Chalet": [
+      "Alpine",
+      "Arrowhead",
+      "Aspen",
+      "XL"
+    ],
+    "Coachmen": [
+      "Clipper"
+    ],
+    "Coleman": [
+      "Destiny Series",
+      "Grand Tour Series",
+      "Niagara"
+    ],
+    "Flagstaff": [
+      "Flagstaff Hardside Pop Up",
+      "Hardside Pop Up",
+      "Sports Enthusiast",
+      "Tent"
+    ],
+    "Fleetwood": [
+      "Americana Series",
+      "Avalon",
+      "Destiny Series",
+      "Evolution",
+      "Highlander",
+      "Niagara",
+      "Scorpion",
+      "Victory"
+    ],
+    "Forest River": [
+      "Flagstaff",
+      "Rockwood",
+      "Rockwood Hard Side",
+      "Rockwood Premier",
+      "Viking"
+    ],
+    "Jayco": [
+      "Baja",
+      "Jay Series",
+      "Sport"
+    ],
+    "MDC": [
+      "Jackson Forward"
+    ],
+    "Midwest Viking": [
+      "Saga"
+    ],
+    "Obi Conqueror": [
+      "Graveler Series"
+    ],
+    "Opus": [
+      "Opus"
+    ],
+    "Palomino": [
+      "MUSTANG",
+      "Yearling"
+    ],
+    "Rockwood": [
+      "Extream Sports",
+      "Freedom",
+      "Premier"
+    ],
+    "Sommerset": [
+      "Chesapeake",
+      "E2",
+      "E3",
+      "Mesa",
+      "Newport",
+      "Sun Valley",
+      "Utah"
+    ],
+    "Starcraft": [
+      "Centennial",
+      "Comet",
+      "RT Series",
+      "Spacemaster",
+      "Star Stream",
+      "Starcraft"
+    ],
+    "SylvanSport": [
+      "Go Camper"
+    ],
+    "Thor": [
+      "Skamper"
+    ],
+    "Tribe": [
+      "Expedition 500"
+    ],
+    "Viking": [
+      "Epic",
+      "Legend"
+    ]
+  },
+  "Truck Slide in Camper": {
+    "Adventurer": [
+      "Adventurer"
+    ],
+    "Alaskan Campers": [
+      "Cab-over"
+    ],
+    "Allen": [
+      "Idle-Time"
+    ],
+    "AlpenLite": [
+      "Cheyenne 900",
+      "Santa Fe",
+      "Saratoga"
+    ],
+    "Arctic Fox": [
+      "1140",
+      "811",
+      "860",
+      "865",
+      "990",
+      "992",
+      "996",
+      "M-1150"
+    ],
+    "Bigfoot": [
+      "M-30C"
+    ],
+    "Capri": [
+      "Retreat",
+      "Rodeo Delux"
+    ],
+    "Chalet": [
+      "All Slide In Models"
+    ],
+    "Eagle Cap": [
+      "1050",
+      "1150",
+      "1160",
+      "1165",
+      "1200",
+      "850",
+      "950"
+    ],
+    "Forest River": [
+      "Palomino"
+    ],
+    "Four Wheel": [
+      "Fleet",
+      "Hawk",
+      "Raven",
+      "Swift"
+    ],
+    "Four Wheel Campers": [
+      "Grandby",
+      "Project M"
+    ],
+    "General Coach": [
+      "Citation",
+      "Corsair Excella"
+    ],
+    "Hallmark": [
+      "Cuchara",
+      "Guanella",
+      "Milner",
+      "Ute"
+    ],
+    "Host": [
+      "Cascade",
+      "Everest",
+      "Mammoth",
+      "Ranier",
+      "Tahoe",
+      "Yellowstone",
+      "Yukon"
+    ],
+    "Interior RV": [
+      "Snow River"
+    ],
+    "KZ": [
+      "Sportsmen"
+    ],
+    "Lance": [
+      "1021",
+      "1030",
+      "1050",
+      "1052",
+      "1055",
+      "1062",
+      "1130",
+      "1131",
+      "1161",
+      "1172",
+      "1181",
+      "1191",
+      "650",
+      "821",
+      "825",
+      "830",
+      "845",
+      "850",
+      "851",
+      "855",
+      "861",
+      "865",
+      "881",
+      "960",
+      "975",
+      "981",
+      "992",
+      "995"
+    ],
+    "Lite-Craft": [
+      "Timberline"
+    ],
+    "Little Guy": [
+      "Cirrus"
+    ],
+    "Livin' Lite": [
+      "Camp Lite"
+    ],
+    "Northern Lite": [
+      "Classic",
+      "Limited Edition",
+      "Lite",
+      "Northern",
+      "Sportsman Plus",
+      "Ten 2000"
+    ],
+    "Northland": [
+      "Polar"
+    ],
+    "Northstar": [
+      "850SC",
+      "Arrow",
+      "Freedom",
+      "Igloo",
+      "Laredo",
+      "Liberty",
+      "TC650",
+      "TC800",
+      "Vista"
+    ],
+    "Northwood": [
+      "Artic Fox",
+      "Wolf Creek"
+    ],
+    "NuCamp": [
+      "Cirrus"
+    ],
+    "Okanagan": [
+      "Okanagan"
+    ],
+    "Outfitter": [
+      "Apex",
+      "Caribou",
+      "Juno"
+    ],
+    "Palomino": [
+      "BackPack",
+      "Bronco",
+      "Maverick",
+      "Real-lite",
+      "Winter Creek"
+    ],
+    "Pastime": [
+      "Pastime"
+    ],
+    "Phoenix": [
+      "P.U.L.S.E."
+    ],
+    "Rugged Mountain Custom RV": [
+      "Granite"
+    ],
+    "S & S": [
+      "Avalanche",
+      "Ponderosa",
+      "S & S Camper"
+    ],
+    "Six-Pac": [
+      "Six-Pac"
+    ],
+    "Starcraft": [
+      "Lonestar"
+    ],
+    "Sun Valley": [
+      "Apache"
+    ],
+    "Travel Lite": [
+      "Mountain Star",
+      "Ultra"
+    ],
+    "Veri-Lite": [
+      "Veri-Lite"
+    ],
+    "West Coast Leisure": [
+      "Okanagan"
+    ]
+  }
+}

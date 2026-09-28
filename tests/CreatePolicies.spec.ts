@@ -6,7 +6,12 @@ import { QuotePage, LineOfBusiness, VehicleCategory, AUTOMATED_BILL_PAY_PLANS } 
 import { StepResult, ReportResult, writeReport } from '../Reporting/TestReport';
 import { waitForManualStep } from '../Utils/ManualStep';
 import { readPolicyRows, PolicyRow } from '../Utils/PolicyDataFile';
-import { randomTestRoutingNumber, randomTestAccountNumber } from '../Utils/TestPaymentData';
+import {
+  randomTestRoutingNumber,
+  randomTestAccountNumber,
+  TEST_CREDIT_CARD_NUMBER,
+  testCreditCardExpiration,
+} from '../Utils/TestPaymentData';
 
 const REPORT_DIR = path.resolve(__dirname, '..', 'test-reports');
 const DATA_FILE = path.resolve(__dirname, '..', 'test-data', 'policies.xlsx');
@@ -179,29 +184,21 @@ if (loadError) {
           result.paymentEnteredManually = false;
           await runStep('Enter ACH details on Pay Plans tab', async () => {
             await quotePage.selectInstallmentPaymentMethod('ACH');
-            await quotePage.enterACHDetailsOnPayPlan({
+            await quotePage.enterACHDetails({
               routingNumber: row.achRoutingNumber || randomTestRoutingNumber(),
               accountNumber: row.achAccountNumber || randomTestAccountNumber(),
             });
           });
         } else if (isAutomatedBillPlan && row.paymentType === 'Credit Card') {
-          // The sandbox's generic test card fills and validates fine but is reliably declined by
-          // the gateway's real Submit and Pay step, so this opens the same form ACH uses and
-          // hands off for a human to enter real card details and complete Submit and Pay.
-          result.paymentEnteredManually = true;
-
-          await runStep('Open Credit Card details on Pay Plans tab', async () => {
+          result.paymentEnteredManually = false;
+          await runStep('Enter Credit Card details on Pay Plans tab', async () => {
             await quotePage.selectInstallmentPaymentMethod('Credit Card');
-            await quotePage.openCreditCardDetailsOnPayPlan();
-          });
-
-          await runStep('Manual: enter credit card details', async () => {
-            await waitForManualStep(
-              page,
-              'Payment Type is set to "Credit Card" on an Automated Bill plan and the Enter Credit ' +
-                "Card Details form is open - the sandbox test card isn't accepted by the payment " +
-                'gateway, so enter real card details and complete Submit and Pay by hand.'
-            );
+            await quotePage.enterCreditCardDetailsOnPayPlan({
+              cardNumber: TEST_CREDIT_CARD_NUMBER,
+              expirationDate: testCreditCardExpiration(),
+              billingAddress: row.addressLine1,
+              billingZip: row.zip,
+            });
           });
         }
 
@@ -221,41 +218,46 @@ if (loadError) {
           await runStep(`Payment (${row.paymentType}) carried over from Pay Plans tab`, async () => {
             await quotePage.expectPaymentTypeCarriedOver(row.paymentType as 'Credit Card' | 'ACH');
           });
-        } else {
-          // Credit Card/ACH detail entry isn't scripted on this screen (no known field IDs), so
-          // those two payment types get a manual hand-off instead of failing outright; None/Check
-          // fill automatically.
-          const needsManualPaymentDetails = row.paymentType === 'Credit Card' || row.paymentType === 'ACH';
+        } else if (row.paymentType === 'ACH') {
+          // Same hosted ACH form/button (#EnterACHDetails) as the Pay Plans tab's Automated Bill
+          // flow - see enterACHDetails's doc comment in QuotePage.ts.
+          result.paymentEnteredManually = false;
 
-          if (needsManualPaymentDetails) {
-            result.paymentEnteredManually = true;
+          await runStep('Select payment type: ACH', async () => {
+            await quotePage.selectPaymentType('ACH');
+          });
 
-            await runStep(`Select payment type: ${row.paymentType}`, async () => {
-              await quotePage.selectPaymentType(row.paymentType as 'Credit Card' | 'ACH');
+          await runStep('Enter ACH details on Closeout tab', async () => {
+            await quotePage.enterACHDetails({
+              routingNumber: row.achRoutingNumber || randomTestRoutingNumber(),
+              accountNumber: row.achAccountNumber || randomTestAccountNumber(),
             });
+          });
+        } else if (row.paymentType === 'Credit Card') {
+          // Not scripted: no gateway-approved test card yet (see README's Known limitations), so
+          // this still gets a manual hand-off instead of failing outright.
+          result.paymentEnteredManually = true;
 
-            await runStep('Manual: enter payment details', async () => {
-              const bankDetails =
-                row.paymentType === 'ACH' && row.achRoutingNumber && row.achAccountNumber
-                  ? ` Use routing number ${row.achRoutingNumber} and account number ${row.achAccountNumber}.`
-                  : '';
-              await waitForManualStep(
-                page,
-                `Payment Type is set to "${row.paymentType}", which isn't scripted yet - enter the ` +
-                  `card/bank details on this screen.${bankDetails}`
-              );
-            });
-          } else {
-            await runStep(
-              `Fill payment info (${row.paymentType}${row.paymentType === 'Check' ? `, #${row.checkNumber}` : ''})`,
-              async () => {
-                await quotePage.selectPaymentType(row.paymentType as 'None' | 'Check');
-                if (row.paymentType === 'Check') {
-                  await quotePage.fillCheckNumber(row.checkNumber!);
-                }
-              }
+          await runStep('Select payment type: Credit Card', async () => {
+            await quotePage.selectPaymentType('Credit Card');
+          });
+
+          await runStep('Manual: enter payment details', async () => {
+            await waitForManualStep(
+              page,
+              `Payment Type is set to "Credit Card", which isn't scripted yet - enter the card details on this screen.`
             );
-          }
+          });
+        } else {
+          await runStep(
+            `Fill payment info (${row.paymentType}${row.paymentType === 'Check' ? `, #${row.checkNumber}` : ''})`,
+            async () => {
+              await quotePage.selectPaymentType(row.paymentType as 'None' | 'Check');
+              if (row.paymentType === 'Check') {
+                await quotePage.fillCheckNumber(row.checkNumber!);
+              }
+            }
+          );
         }
 
         result.policyNumber = await runStep(

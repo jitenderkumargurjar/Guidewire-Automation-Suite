@@ -5,24 +5,33 @@
 //
 // Dropdown sources for State/MailingState/VehicleMake/VehicleModel live on a hidden "Lists" sheet
 // (Excel's inline list-validation formula has a ~255 character limit, too short for 50 states or
-// 25+ vehicle makes). VehicleRatingClass -> VehicleMake -> VehicleModel is a three-level cascade,
+// 170+ vehicle makes). VehicleRatingClass -> VehicleMake -> VehicleModel is a three-level cascade,
 // mirroring the real app's Vehicle tab (Pages/QuotePage.ts: VehicleCategory picks which "Add
 // Vehicle Detail" form shows, and Make/Model are cascading selects fed by the resulting vehicle
-// type - Affinity Auto's makes are passenger-car brands, Motorhome/Travel Trailer's are RV
-// manufacturers, and each shows a different model list even where a manufacturer name is shared,
-// e.g. Forest River builds both). There's a single VehicleRatingClass column rather than separate
-// VehicleCategory/VehicleRatingClass columns, since VehicleCategory is really just "which of these
-// 8 rating classes did you pick" - Utils/PolicyDataFile.ts's RATING_CLASS_TO_CATEGORY recovers the
-// category from it at read time. Each make's model list is a named range, and each category's
-// make list is also a named range; the Make/Model columns' validation formulas resolve the right
-// named range per row via INDIRECT() against that row's VehicleRatingClass (and +Make) cells,
-// using a lookup table (see ratingClassCategoryRange below) to map rating class -> category.
+// type). Each make's model list is a named range, and each rating class's make list is also a
+// named range; the Make/Model columns' validation formulas resolve the right named range per row
+// via INDIRECT() directly against that row's VehicleRatingClass (and +Make) cells - no
+// class->category lookup needed for this, since (see below) the Model list doesn't just depend on
+// category, it depends on the exact rating class.
 //
-// Some lists are confirmed by other code/comments in this repo (PayPlan, VehicleRatingClass,
-// PaymentType); others (VehicleMake/Model, Deductible, Transmission, FuelType, EngineLocation)
-// are a best-effort convenience list, not a verified export of what this Guidewire instance
-// actually rates - the live app may accept values outside these lists, or reject some inside them.
-// Every dropdown here allows typing over it (showErrorMessage: false) for exactly that reason.
+// VehicleMake/VehicleModel (VEHICLE_DATA, from ./vehicleData.json) *is* a verified export - scraped
+// live, one rating class at a time, via tests/_scrape-vehicle-data.spec.ts (see that file's doc
+// comment for method - re-run it, then this script, if this instance's reference data ever changes).
+// Two things that looked like reasonable shortcuts turned out to be wrong and cost real debugging
+// time before this was scraped, so both are captured here too: (1) the Make list *is* shared within
+// a category (Motorhome
+// Class A/B/C all list the same ~50 makes; the four Travel-Trailer-family classes all list the same
+// ~180), but (2) the Model list for a given make is NOT shared - it depends on the exact rating
+// class, including makes with real models under one class and zero under another (e.g. Forest
+// River/Motorhome: Class A has Berkshire/Charleston/Fr3/Georgetown/Legacy/Tsunami, Class C has an
+// entirely different Forester/Lexington/Ridgeveiw/Solera/Sunseeker lineup; Airstream/Travel Trailer
+// has 20 real models, Airstream/Trailer Fifth Wheel has zero). So VEHICLE_DATA is keyed by the
+// exact rating class throughout, not by the 3-way category grouping - a make with zero models under
+// a given class is dropped from that class's Make list entirely (there'd be nothing to pick in
+// Model anyway). Other lists (PayPlan, VehicleRatingClass, PaymentType, Deductible, Transmission,
+// FuelType, EngineLocation) are still hand-confirmed against the live app rather than scraped.
+// Every dropdown here still allows typing over it (showErrorMessage: false) as a safety valve in
+// case this Guidewire instance's reference data changes after the last scrape.
 const ExcelJS = require('exceljs');
 const XLSX = require('xlsx');
 const fs = require('fs');
@@ -79,7 +88,6 @@ const STATES = [
 ];
 
 const LINE_OF_BUSINESS = ['Mechanical Breakdown Insurance', 'Vehicle Service Contract'];
-const VEHICLE_CATEGORIES = ['Affinity Auto', 'Motorhome', 'Travel Trailer'];
 // [RatingClass, Category] - all 8 selectable VehicleRatingClass values and which VehicleCategory
 // each belongs to. "Affinity Auto" is its own rating class (auto-fills once the vehicle type is
 // chosen, per Pages/QuotePage.ts); Motorhome/Travel Trailer's sub-classes are confirmed by the
@@ -110,65 +118,9 @@ const PAY_PLANS = [
 ];
 const PAYMENT_TYPES = ['None', 'Check', 'Credit Card', 'ACH'];
 
-// Curated common makes/models per VehicleCategory, for convenience - not a verified export of
-// what this Guidewire instance's rating engine actually offers (see file header comment).
-// Affinity Auto = passenger-car brands; Motorhome/Travel Trailer = RV manufacturers. Some
-// manufacturer names appear in more than one category (Forest River, Jayco, Coachmen all build
-// both motorhomes and travel trailers) with a different model lineup each time - that's exactly
-// why the Model dropdown's named range is keyed by Category+Make together, not by Make alone.
-const VEHICLE_DATA = {
-  'Affinity Auto': {
-    Honda: ['Accord', 'Civic', 'CR-V', 'Pilot', 'Odyssey', 'HR-V', 'Passport', 'Ridgeline'],
-    Toyota: ['Camry', 'Corolla', 'RAV4', 'Highlander', 'Tacoma', 'Tundra', 'Sienna', '4Runner'],
-    Ford: ['F-150', 'Escape', 'Explorer', 'Mustang', 'Edge', 'Fusion', 'Focus', 'Expedition'],
-    Chevrolet: ['Silverado', 'Equinox', 'Malibu', 'Traverse', 'Tahoe', 'Camaro', 'Impala', 'Suburban'],
-    Nissan: ['Altima', 'Rogue', 'Sentra', 'Pathfinder', 'Murano', 'Maxima', 'Frontier', 'Titan'],
-    Hyundai: ['Elantra', 'Sonata', 'Tucson', 'Santa Fe', 'Accent', 'Kona', 'Palisade', 'Venue'],
-    Kia: ['Optima', 'Forte', 'Sportage', 'Sorento', 'Soul', 'Telluride', 'Rio', 'Seltos'],
-    Jeep: ['Wrangler', 'Grand Cherokee', 'Cherokee', 'Compass', 'Renegade', 'Gladiator'],
-    Ram: ['1500', '2500', '3500', 'ProMaster'],
-    GMC: ['Sierra', 'Terrain', 'Acadia', 'Yukon', 'Canyon'],
-    Subaru: ['Outback', 'Forester', 'Crosstrek', 'Impreza', 'Legacy', 'Ascent'],
-    Volkswagen: ['Jetta', 'Passat', 'Tiguan', 'Atlas', 'Golf', 'Beetle'],
-    BMW: ['3 Series', '5 Series', 'X3', 'X5', 'X1'],
-    'Mercedes-Benz': ['C-Class', 'E-Class', 'GLC', 'GLE', 'S-Class'],
-    Audi: ['A4', 'A6', 'Q5', 'Q7', 'A3'],
-    Mazda: ['Mazda3', 'Mazda6', 'CX-5', 'CX-9', 'CX-30'],
-    Dodge: ['Charger', 'Challenger', 'Durango', 'Journey'],
-    Chrysler: ['300', 'Pacifica', 'Voyager'],
-    Buick: ['Encore', 'Enclave', 'Envision', 'LaCrosse'],
-    Cadillac: ['Escalade', 'XT5', 'CT5', 'XT4'],
-    Lexus: ['RX', 'ES', 'NX', 'GX'],
-    Acura: ['MDX', 'RDX', 'TLX', 'ILX'],
-    Infiniti: ['QX60', 'Q50', 'QX80'],
-    Lincoln: ['Navigator', 'Aviator', 'Corsair'],
-    Volvo: ['XC90', 'XC60', 'S60'],
-    Tesla: ['Model 3', 'Model Y', 'Model S', 'Model X'],
-    Mitsubishi: ['Outlander', 'Eclipse Cross', 'Mirage'],
-  },
-  Motorhome: {
-    Winnebago: ['View', 'Vista', 'Adventurer', 'Journey', 'Solis', 'Navion', 'Forza'],
-    'Thor Motor Coach': ['Four Winds', 'Freedom Elite', 'Chateau', 'Ace', 'Axis', 'Windsport'],
-    'Forest River': ['Forester', 'Sunseeker', 'FR3', 'Georgetown'],
-    Jayco: ['Redhawk', 'Greyhawk', 'Alante', 'Precept'],
-    Newmar: ['Bay Star', 'Ventana', 'Dutch Star', 'King Aire'],
-    Tiffin: ['Allegro', 'Phaeton', 'Breeze', 'Wayfarer'],
-    Fleetwood: ['Bounder', 'Discovery', 'Flair', 'Pace Arrow'],
-    Coachmen: ['Leprechaun', 'Freelander', 'Mirada', 'Pursuit'],
-    'Gulf Stream': ['Conquest', 'Independence', 'BT Cruiser'],
-  },
-  'Travel Trailer': {
-    'Forest River': ['Rockwood', 'Wildwood', 'Salem', 'Cherokee', 'Flagstaff'],
-    Jayco: ['Jay Flight', 'Eagle', 'White Hawk', 'Jay Feather'],
-    Keystone: ['Passport', 'Bullet', 'Hideout', 'Springdale', 'Cougar'],
-    'Grand Design': ['Imagine', 'Reflection', 'Transcend', 'Momentum'],
-    Airstream: ['Bambi', 'Flying Cloud', 'International', 'Classic'],
-    Coachmen: ['Catalina', 'Freedom Express', 'Apex', 'Spirit'],
-    Heartland: ['Wilderness', 'Prowler', 'Mallard', 'North Trail'],
-    Dutchmen: ['Aspen Trail', 'Coleman', 'Kodiak'],
-    CrossRoads: ['Zinger', 'Sunset Trail', 'Volante'],
-  },
-};
+// Verified export, keyed by exact VehicleRatingClass - see file header comment for why category
+// alone isn't enough and how this was captured.
+const VEHICLE_DATA = require('./vehicleData.json');
 
 // Excel defined names can't contain spaces or hyphens - matches the SUBSTITUTE() calls in the
 // Make/Model columns' INDIRECT() formulas below, which sanitize cell values the same way.
@@ -176,11 +128,24 @@ function sanitizeName(name) {
   return name.replace(/[^A-Za-z0-9_]/g, '_');
 }
 
-// Formula fragment that sanitizes a cell reference the same way sanitizeName() sanitizes a string
-// - only spaces and hyphens appear in any of the category/make names above, so two SUBSTITUTEs
-// covers it.
+// Every non-[A-Za-z0-9_] character that actually appears in a rating class or make name - the
+// scraped data has more than just spaces/hyphens (e.g. "Livin' Lite", "T@B", "S & S",
+// "Sportsmobile-(2WD Only)"), and any one missed here leaves that make's Model dropdown empty.
+const FORMULA_SANITIZE_CHARS = [
+  ...new Set(
+    [...VEHICLE_RATING_CLASSES.map(([ratingClass]) => ratingClass), ...Object.values(VEHICLE_DATA).flatMap(Object.keys)]
+      .join('')
+      .replace(/[A-Za-z0-9_]/g, '')
+  ),
+];
+
+// Formula fragment that sanitizes a cell reference the same way sanitizeName() sanitizes a string,
+// one nested SUBSTITUTE per character in FORMULA_SANITIZE_CHARS.
 function sanitizeFormula(cellRef) {
-  return `SUBSTITUTE(SUBSTITUTE(${cellRef}," ","_"),"-","_")`;
+  return FORMULA_SANITIZE_CHARS.reduce(
+    (expr, ch) => `SUBSTITUTE(${expr},"${ch === '"' ? '""' : ch}","_")`,
+    cellRef
+  );
 }
 
 const colLetter = (n) => XLSX.utils.encode_col(n - 1);
@@ -256,21 +221,6 @@ async function main() {
     return `Lists!$${col}$2:$${col}$${values.length + 1}`;
   }
 
-  // Two-column table: RatingClass value -> its sanitized Category key (e.g. "Travel Trailer" ->
-  // "Travel_Trailer"). VLOOKUP against this (see the Make/Model formulas below) is how the
-  // cascade recovers Category from the single VehicleRatingClass column.
-  function writeLookupTable(header1, header2, pairs) {
-    const col1 = colLetter(nextCol++);
-    const col2 = colLetter(nextCol++);
-    lists.getCell(`${col1}1`).value = header1;
-    lists.getCell(`${col2}1`).value = header2;
-    pairs.forEach(([a, b], i) => {
-      lists.getCell(`${col1}${i + 2}`).value = a;
-      lists.getCell(`${col2}${i + 2}`).value = b;
-    });
-    return `Lists!$${col1}$2:$${col2}$${pairs.length + 1}`;
-  }
-
   const stateRange = writeColumn('States', STATES.map((s) => s[0]));
   const stateAbbrRange = writeColumn('StateAbbr', STATES.map((s) => s[1]));
   const lobRange = writeColumn('LineOfBusiness', LINE_OF_BUSINESS);
@@ -282,38 +232,44 @@ async function main() {
   const payPlanRange = writeColumn('PayPlan', PAY_PLANS);
   const paymentTypeRange = writeColumn('PaymentType', PAYMENT_TYPES);
   const yearRange = writeColumn('VehicleYear', YEARS);
-  const ratingClassCategoryRange = writeLookupTable(
-    'RatingClass',
-    'CategoryKey',
-    VEHICLE_RATING_CLASSES.map(([ratingClass, category]) => [ratingClass, sanitizeName(category)])
-  );
 
-  // One column per category, holding just that category's makes; named range keyed by the
-  // sanitized category name (e.g. "Travel_Trailer") - the Make column's INDIRECT() formula
-  // resolves this per row by first looking up the category for that row's VehicleRatingClass.
-  for (const category of VEHICLE_CATEGORIES) {
-    const makes = Object.keys(VEHICLE_DATA[category]);
-    const range = writeColumn(`${category} Makes`, makes);
-    workbook.definedNames.add(range, sanitizeName(category));
+  // One column per rating class, holding just that class's makes; named range keyed by the
+  // sanitized rating class name (e.g. "Motorhome_Class_A") - the Make column's INDIRECT() formula
+  // resolves this per row directly from that row's VehicleRatingClass cell. Rating class, not
+  // category, because although the Make list happens to be shared within a category, the Model
+  // list per make is not (see file header comment) - keying everything by rating class from the
+  // start keeps Make and Model consistent with each other.
+  for (const [ratingClass] of VEHICLE_RATING_CLASSES) {
+    const makes = Object.keys(VEHICLE_DATA[ratingClass] ?? {});
+    const range = writeColumn(`${ratingClass} Makes`, makes);
+    workbook.definedNames.add(range, sanitizeName(ratingClass));
   }
 
-  // One column per (category, make) pair, holding just that pair's models; named range keyed by
-  // sanitized "Category_Make" together - not by make alone, since a make like Forest River builds
-  // both motorhomes and travel trailers with a different model lineup each time. The Model
-  // column's INDIRECT() formula resolves this per row from that row's Category *and* Make cells.
-  for (const category of VEHICLE_CATEGORIES) {
-    for (const [make, models] of Object.entries(VEHICLE_DATA[category])) {
-      const range = writeColumn(`${category} ${make} Models`, models);
-      workbook.definedNames.add(range, `${sanitizeName(category)}_${sanitizeName(make)}`);
+  // One column per (rating class, make) pair, holding just that pair's models; named range keyed
+  // by sanitized "RatingClass_Make" together. The Model column's INDIRECT() formula resolves this
+  // per row from that row's VehicleRatingClass *and* Make cells.
+  for (const [ratingClass] of VEHICLE_RATING_CLASSES) {
+    for (const [make, models] of Object.entries(VEHICLE_DATA[ratingClass] ?? {})) {
+      const range = writeColumn(`${ratingClass} ${make} Models`, models);
+      workbook.definedNames.add(range, `${sanitizeName(ratingClass)}_${sanitizeName(make)}`);
     }
   }
 
   // --- "Policies" sheet (created above): the data CreatePolicies.spec.ts actually reads. ---
   sheet.columns = HEADERS.map((header) => ({ header, key: header, width: Math.max(header.length + 2, 14) }));
+
+  const colIndex = (name) => HEADERS.indexOf(name) + 1;
+
+  // ABA routing numbers are always 9 digits and commonly start with 0 (e.g. "021000021"). Without
+  // this, typing a leading-zero value into a plain General-formatted cell makes Excel silently
+  // store it as the number 21000021 - Text format keeps whatever digits are typed intact.
+  // ACHAccountNumber gets the same treatment since it's the same kind of free-form digit string.
+  sheet.getColumn(colIndex('ACHRoutingNumber')).numFmt = '@';
+  sheet.getColumn(colIndex('ACHAccountNumber')).numFmt = '@';
+
   dataRows.forEach((row) => sheet.addRow(row));
 
   const lastRow = Math.max(dataRows.length + 1, 200);
-  const colIndex = (name) => HEADERS.indexOf(name) + 1;
 
   // One data validation entry covering the whole column range, rather than one per cell - setting
   // dataValidation per-cell (even with an identical rule) makes ExcelJS emit separate, overlapping
@@ -359,29 +315,29 @@ async function main() {
   applyListValidation('PaymentType', paymentTypeRange);
   applyExactDigitsValidation('Phone', 10);
   applyExactDigitsValidation('CardNumber', 16);
+  applyExactDigitsValidation('ACHRoutingNumber', 9);
 
-  // VehicleMake depends on VehicleRatingClass (via the RatingClass -> CategoryKey lookup table),
-  // and VehicleModel depends on VehicleRatingClass *and* VehicleMake together (see the named-range
-  // comment above) - so unlike the uniform columns above, both need their own formula per row. One
-  // dataValidation entry per single-cell address; still safe since none of these addresses overlap.
+  // VehicleMake depends on VehicleRatingClass directly, and VehicleModel depends on
+  // VehicleRatingClass *and* VehicleMake together (see the named-range comment above) - so unlike
+  // the uniform columns above, both need their own formula per row. One dataValidation entry per
+  // single-cell address; still safe since none of these addresses overlap.
   const ratingClassCol = colLetter(colIndex('VehicleRatingClass'));
   const makeColLetter = colLetter(colIndex('VehicleMake'));
   const modelColLetter = colLetter(colIndex('VehicleModel'));
-  const categoryKeyLookup = (cellRef) => `VLOOKUP(${cellRef},${ratingClassCategoryRange},2,FALSE)`;
   for (let r = 2; r <= lastRow; r++) {
     const ratingClassCell = `$${ratingClassCol}${r}`;
     sheet.dataValidations.add(`${makeColLetter}${r}`, {
       type: 'list',
       allowBlank: true,
       showErrorMessage: false,
-      formulae: [`INDIRECT(${categoryKeyLookup(ratingClassCell)})`],
+      formulae: [`INDIRECT(${sanitizeFormula(ratingClassCell)})`],
     });
     sheet.dataValidations.add(`${modelColLetter}${r}`, {
       type: 'list',
       allowBlank: true,
       showErrorMessage: false,
       formulae: [
-        `INDIRECT(${categoryKeyLookup(ratingClassCell)}&"_"&${sanitizeFormula(`$${makeColLetter}${r}`)})`,
+        `INDIRECT(${sanitizeFormula(ratingClassCell)}&"_"&${sanitizeFormula(`$${makeColLetter}${r}`)})`,
       ],
     });
   }

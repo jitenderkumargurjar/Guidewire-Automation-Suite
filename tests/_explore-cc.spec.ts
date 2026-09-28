@@ -39,7 +39,7 @@ test('explore credit card form fields', async ({ page }) => {
   await quotePage.goToNextPage();
   await quotePage.selectPayPlan('Quarterly Pay Automated');
   await quotePage.selectInstallmentPaymentMethod('Credit Card');
-  await quotePage.openCreditCardDetailsOnPayPlan();
+  await quotePage.enterCreditCardDetailsButton.click();
 
   // Dump the hosted payment iframe's fields for inspection, without filling/submitting.
   await page.waitForTimeout(1500);

@@ -56,6 +56,20 @@ function cellToString(value: unknown): string {
   return String(value).trim();
 }
 
+// ABA routing numbers are always exactly 9 digits and commonly start with 0 (e.g. "021000021").
+// If the ACHRoutingNumber column wasn't formatted as Text when the value was typed in, Excel
+// silently stores it as a number and drops the leading zero (021000021 -> 21000021) - restore it
+// here so an already-corrupted cell still round-trips correctly. Only pads when the cell actually
+// came back as a number; a string value (typed with the column formatted as Text, or prefixed with
+// ') is trusted as-is.
+function cellToRoutingNumber(value: unknown): string {
+  if (value === undefined || value === null || value === '') return '';
+  if (typeof value === 'number') {
+    return String(value).padStart(9, '0');
+  }
+  return String(value).trim();
+}
+
 // The spreadsheet has a single VehicleRatingClass column (see scripts/generatePolicyTemplate.js)
 // rather than a separate VehicleCategory column, since VehicleCategory is really just "which of
 // these 8 rating classes did you pick" - this is the reverse lookup that recovers it. Keys must
@@ -171,7 +185,7 @@ export function readPolicyRows(filePath: string): PolicyRow[] {
       payPlan: get('PayPlan'),
       paymentType: get('PaymentType'),
       checkNumber: get('CheckNumber') || undefined,
-      achRoutingNumber: get('ACHRoutingNumber') || undefined,
+      achRoutingNumber: cellToRoutingNumber(record['ACHRoutingNumber']) || undefined,
       achAccountNumber: get('ACHAccountNumber') || undefined,
     };
     row.validationError = validate(row);

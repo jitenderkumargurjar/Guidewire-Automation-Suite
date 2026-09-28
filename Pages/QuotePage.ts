@@ -32,6 +32,14 @@ export interface ACHPaymentDetails {
   accountNumber: string;
 }
 
+export interface CreditCardDetails {
+  cardNumber: string;
+  // MM/YY.
+  expirationDate: string;
+  billingAddress: string;
+  billingZip: string;
+}
+
 export interface VehicleDetails {
   category: VehicleCategory;
   // Required for Motorhome ("Motorhome Class A/B/C") and Travel Trailer ("Travel Trailer",
@@ -91,6 +99,7 @@ export class QuotePage {
   readonly paymentTypeSelect: Locator;
   readonly paymentAmountInput: Locator;
   readonly checkNumberInput: Locator;
+  readonly additionalDeclarationTextInput: Locator;
   readonly issueNewBusinessLink: Locator;
 
   // Pay Plans tab: appears once one of the AUTOMATED_BILL_PAY_PLANS is selected.
@@ -168,6 +177,10 @@ export class QuotePage {
     this.paymentTypeSelect = page.locator('#TransactionInfo\\.PaymentTypeCd');
     this.paymentAmountInput = page.locator('#TransactionInfo\\.PaymentAmt');
     this.checkNumberInput = page.locator('#TransactionInfo\\.CheckNumber');
+    // "Additional Declaration Text" textarea under Transaction Request on the Closeout screen.
+    // Not marked with a "*", but Issue New Business rejects the transaction while it's empty
+    // ("Additional Declaration Text is required to complete this transaction").
+    this.additionalDeclarationTextInput = page.locator('#TransactionInfo\\.TransactionLongDescription');
     // "Issue New Business" - kicks off a multi-stage, long-running server job.
     this.issueNewBusinessLink = page.locator('#Process');
 
@@ -480,8 +493,14 @@ export class QuotePage {
 
     // Re-query frames fresh each poll rather than reusing confirmFrame - by this point it may
     // already be a detached, torn-down instance (same reason waitForPaymentFrame re-queries).
+    // 60s, not 20s: a real (non-instant-sandbox) gateway authorization round-trip - e.g. the
+    // credit card path, unlike ACH's fast test acceptance - can take longer than 20s to come
+    // back with a decline. A live run against a real card confirmed this: the decline banner was
+    // present on the page well after 20s had elapsed, but this loop had already given up and
+    // thrown a generic timeout, which then cascaded into every later step failing against a
+    // payment modal that was still open.
     const start = Date.now();
-    while (Date.now() - start < 20000) {
+    while (Date.now() - start < 60000) {
       const paymentFrames = this.page.frames().filter((fr) => fr.url().includes('processonepayments.com'));
       if (paymentFrames.length === 0) return;
       for (const fr of paymentFrames) {
@@ -500,7 +519,12 @@ export class QuotePage {
   // Fills and submits the ACH collection form opened by "Enter ACH Details". Only Account
   // Number/Repeat/Routing Number are set - Name On Account auto-fills from the insured, and
   // Checking is the default account type.
-  async enterACHDetailsOnPayPlan(details: ACHPaymentDetails) {
+  //
+  // Same #EnterACHDetails button/hosted-iframe component either way - used both from the Pay
+  // Plans tab (AUTOMATED_BILL_PAY_PLANS) and from the Closeout tab's Payment Type = ACH
+  // (DIRECT_BILL_PAY_PLANS), confirmed by inspecting both screens' iframe field ids/placeholders,
+  // which are identical (see tests/_explore-ach-closeout.spec.ts).
+  async enterACHDetails(details: ACHPaymentDetails) {
     await this.enterACHDetailsButton.click();
     const entryFrame = await this.waitForPaymentFrame('Routing Number');
     await entryFrame.locator('input[placeholder="Account Number"]').fill(details.accountNumber);
@@ -514,14 +538,26 @@ export class QuotePage {
     await this.page.waitForLoadState('networkidle');
   }
 
-  // Opens the Credit Card collection form via "Enter Credit Card Details" and waits for it to be
-  // ready, then hands off - unlike enterACHDetailsOnPayPlan, card details aren't filled/submitted
-  // here. The sandbox's generic test card (4111...) reliably fails the gateway's real Submit and
-  // Pay authorization even though it fills and validates fine, so this is a manual hand-off point
-  // until a test card that the gateway actually approves is available.
-  async openCreditCardDetailsOnPayPlan() {
+  // Fills and submits the Credit Card collection form opened by "Enter Credit Card Details".
+  // Only Card Number/Expiration Date/Billing Address/Billing Zip are set - Name On Card
+  // auto-fills from the insured, same as ACH's Name On Account. The sandbox's generic test card
+  // (see TestPaymentData.TEST_CREDIT_CARD_NUMBER) fills and validates fine here but is reliably
+  // declined by the gateway's real Submit and Pay authorization; confirmAndSubmitPayment already
+  // detects that decline and throws, so it surfaces as an ordinary failed step rather than
+  // silently appearing to succeed.
+  async enterCreditCardDetailsOnPayPlan(details: CreditCardDetails) {
     await this.enterCreditCardDetailsButton.click();
-    await this.waitForPaymentFrame('Card Number');
+    const entryFrame = await this.waitForPaymentFrame('Card Number');
+    await entryFrame.locator('input#cardNumber').fill(details.cardNumber);
+    await entryFrame.locator('input#expirationDate').fill(details.expirationDate);
+    await entryFrame.locator('input#billingAddress').fill(details.billingAddress);
+    await entryFrame.locator('input#billingZip').fill(details.billingZip);
+    // Mirrors the routing-number debounce wait in enterACHDetails - give async
+    // validation a beat to settle before Next, or the click can land mid-validation.
+    await this.page.waitForTimeout(500);
+    await entryFrame.getByRole('button', { name: /^next$/i }).click();
+    await this.confirmAndSubmitPayment();
+    await this.page.waitForLoadState('networkidle');
   }
 
   // Binding requires the "Select Customer" screen to be resolved at the exact moment of
@@ -579,11 +615,23 @@ export class QuotePage {
   // "Processing Stats") and, once done, navigates away entirely to the Home/Inbox dashboard -
   // the application page's own elements (including quoteNumberLocator) no longer exist there.
   // The policy number instead appears in a notification banner: "Policy has been created: X".
-  async issueNewBusiness(): Promise<string> {
+  //
+  // Fills Additional Declaration Text first if it's still empty, since the server rejects the
+  // transaction without it. A rejection re-renders the Closeout screen with an error banner
+  // instead of navigating away, so that's detected and thrown immediately rather than waiting
+  // out the full policy-created timeout.
+  async issueNewBusiness(declarationText = 'New Business'): Promise<string> {
+    if (!(await this.additionalDeclarationTextInput.inputValue()).trim()) {
+      await this.additionalDeclarationTextInput.fill(declarationText);
+    }
     await this.issueNewBusinessLink.click();
 
     const policyCreatedBanner = this.page.getByText(/Policy has been created/i);
-    await policyCreatedBanner.waitFor({ state: 'visible', timeout: 480000 });
+    const rejectionError = this.page.getByText(/is required to complete this transaction/i).first();
+    await policyCreatedBanner.or(rejectionError).first().waitFor({ state: 'visible', timeout: 480000 });
+    if (await rejectionError.isVisible()) {
+      throw new Error(`Issue New Business was rejected: "${(await rejectionError.textContent())?.trim()}"`);
+    }
 
     const bannerText = await policyCreatedBanner.textContent();
     const match = bannerText?.match(/Policy has been created:\s*([A-Z0-9-]+)/i);
